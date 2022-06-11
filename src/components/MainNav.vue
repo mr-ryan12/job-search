@@ -8,11 +8,28 @@
           company
         }}</a>
         <nav>
-          <a>Teams</a>
+          <!-- <a>Teams</a>
           <a>Locations</a>
           <a>Benefits</a>
           <a>Jobs</a>
-          <a>Students</a>
+          <a>Students</a> -->
+          <ul>
+            <li>
+              <a href="">Teams</a>
+            </li>
+            <li>
+              <a href="">Locations</a>
+            </li>
+            <li>
+              <a href="">Benefits</a>
+            </li>
+            <li>
+              <a href="">Jobs</a>
+            </li>
+            <li>
+              <a href="">Students</a>
+            </li>
+          </ul>
         </nav>
       </div>
     </div>
@@ -32,19 +49,21 @@ export default {
 </script>
 
 <style scoped>
-nav {
+ul {
   display: flex;
   align-items: center;
   border-bottom: 2px solid grey;
   padding: 0.5rem;
   border-bottom: none;
+  margin-left: 1rem;
+  height: 100%;
 }
 
 .nav-logo {
   font-size: 1.25rem;
 }
 
-nav > a {
+li > a {
   margin: 10px;
 }
 </style>
