@@ -8,11 +8,6 @@
           company
         }}</a>
         <nav>
-          <!-- <a>Teams</a>
-          <a>Locations</a>
-          <a>Benefits</a>
-          <a>Jobs</a>
-          <a>Students</a> -->
           <ul>
             <li>
               <a href="">Teams</a>
@@ -21,13 +16,16 @@
               <a href="">Locations</a>
             </li>
             <li>
-              <a href="">Benefits</a>
+              <a href="">Life at Ryan Corp</a>
             </li>
             <li>
-              <a href="">Jobs</a>
+              <a href="">How we hire</a>
             </li>
             <li>
               <a href="">Students</a>
+            </li>
+            <li>
+              <a href="">Jobs</a>
             </li>
           </ul>
         </nav>
@@ -64,6 +62,6 @@ ul {
 }
 
 li > a {
-  margin: 10px;
+  margin: 1rem;
 }
 </style>
