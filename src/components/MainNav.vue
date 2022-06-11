@@ -4,7 +4,16 @@
       <div
         class="flex flex-nowrap h-full px-8 mx-auto border-b border-solid border-brand-gray-1"
       >
-        <a href="/" class="flex items-center h-full text-xl">{{ company }}</a>
+        <a :href="url" class="flex items-center h-full text-xl">{{
+          company
+        }}</a>
+        <nav>
+          <a>Teams</a>
+          <a>Locations</a>
+          <a>Benefits</a>
+          <a>Jobs</a>
+          <a>Students</a>
+        </nav>
       </div>
     </div>
   </header>
@@ -15,7 +24,8 @@ export default {
   name: "MainNav",
   data() {
     return {
-      company: "Bobo Careers",
+      company: "Ryan's Careers",
+      url: "https://careers.google.com",
     };
   },
 };
@@ -27,14 +37,14 @@ nav {
   align-items: center;
   border-bottom: 2px solid grey;
   padding: 0.5rem;
+  border-bottom: none;
 }
 
 .nav-logo {
   font-size: 1.25rem;
 }
 
-nav > h2,
-nav > p {
+nav > a {
   margin: 10px;
 }
 </style>
