@@ -19,7 +19,10 @@
       <div
         class="flex flex-nowrap h-full px-8 mx-auto border-b border-solid border-brand-gray-1"
       >
-        <a href="/" class="flex items-center h-full text-xl">Bobo Careers</a>
+        <a href="/" class="flex items-center h-full text-xl">{{ company }}</a>
+        <h2 class="flex items-center h-full ml-8">
+          Developed by: {{ author.firstName }} {{ author.lastName }}
+        </h2>
       </div>
     </div>
   </header>
@@ -28,6 +31,15 @@
 <script>
 export default {
   name: "MainNav",
+  data() {
+    return {
+      company: "Bobo Careers",
+      author: {
+        firstName: "Ryan",
+        lastName: "McBride",
+      },
+    };
+  },
 };
 </script>
 
