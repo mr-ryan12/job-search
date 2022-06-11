@@ -9,23 +9,8 @@
         }}</a>
         <nav>
           <ul>
-            <li>
-              <a href="">Teams</a>
-            </li>
-            <li>
-              <a href="">Locations</a>
-            </li>
-            <li>
-              <a href="">Life at Ryan Corp</a>
-            </li>
-            <li>
-              <a href="">How we hire</a>
-            </li>
-            <li>
-              <a href="">Students</a>
-            </li>
-            <li>
-              <a href="">Jobs</a>
+            <li v-for="item in menuItems" :key="item">
+              <a href="">{{ item }}</a>
             </li>
           </ul>
         </nav>
@@ -41,6 +26,14 @@ export default {
     return {
       company: "Ryan's Careers",
       url: "https://careers.google.com",
+      menuItems: [
+        "Teams",
+        "Locations",
+        "Life at Ryan Corp",
+        "How we hire",
+        "Students",
+        "Jobs",
+      ],
     };
   },
 };
