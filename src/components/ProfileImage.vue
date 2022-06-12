@@ -16,6 +16,7 @@ export default {
 
 <style>
 img {
+  margin: 0.5rem;
   margin-left: 35rem;
 }
 </style>
