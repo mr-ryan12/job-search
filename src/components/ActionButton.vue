@@ -14,12 +14,12 @@ export default {
       type: Boolean,
     },
   },
+  emits: ["login"],
   data() {
     return {
       profileImage: profilePicture,
     };
   },
-  emits: ["login"],
   computed: {
     setLogin() {
       return this.$emit("login");
