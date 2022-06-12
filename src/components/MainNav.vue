@@ -18,19 +18,27 @@
             </li>
           </ul>
         </nav>
-        <LoginButton :is-logged-in="isLoggedIn" @login="$emit('login')" />
+        <ActionButton
+          v-if="!isLoggedIn"
+          text="Sign In"
+          :is-logged-in="isLoggedIn"
+          @click="$emit('login')"
+        />
+        <ProfileImage v-else />
       </div>
     </div>
   </header>
 </template>
 
 <script>
-import LoginButton from "./LoginButton.vue";
+import ActionButton from "./ActionButton.vue";
+import ProfileImage from "./ProfileImage.vue";
 
 export default {
   name: "MainNav",
   components: {
-    LoginButton,
+    ActionButton,
+    ProfileImage,
   },
   props: {
     isLoggedIn: {

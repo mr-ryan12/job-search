@@ -1,35 +1,35 @@
 <template>
-  <button v-if="!isLoggedIn" class="login-button" @click="setLogin">
-    Sign In
+  <button
+    data-test="sign-in-button"
+    :class="isHovering ? 'hover' : null"
+    @mouseenter="hoverTrue"
+    @mouseleave="hoverFalse"
+  >
+    {{ text }}
   </button>
-  <img v-else :src="profilePicture" alt="Profile Picture" />
 </template>
 
 <script>
-import profilePicture from "@/assets/profile-picture.png";
-
 export default {
-  props: {
-    isLoggedIn: {
-      type: Boolean,
-    },
-  },
-  emits: ["login"],
+  props: ["text"],
   data() {
     return {
-      profileImage: profilePicture,
+      isHovering: false,
     };
   },
-  computed: {
-    setLogin() {
-      return this.$emit("login");
+  methods: {
+    hoverTrue() {
+      this.isHovering = true;
+    },
+    hoverFalse() {
+      this.isHovering = false;
     },
   },
 };
 </script>
 
 <style scoped>
-button.login-button {
+button {
   background-color: blue;
   color: #fff;
   margin-left: 34rem;
@@ -40,14 +40,7 @@ button.login-button {
   border-radius: 5px;
 }
 
-button.login-button:hover {
-  /* box-shadow: 3px 3px 3px 3px #4285f4; */
-  background-color: #fff;
-}
-
-img {
-  height: 80%;
-  margin-top: 0.4rem;
-  margin-left: 35rem;
+.hover {
+  box-shadow: 0 0 3px 3px rgb(137, 137, 238);
 }
 </style>
