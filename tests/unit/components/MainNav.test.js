@@ -1,6 +1,7 @@
 import { mount } from "@vue/test-utils";
 
 import MainNav from "@/components/MainNav.vue";
+import App from "@/App.vue";
 
 describe("MainNav", () => {
   let wrapper;
@@ -31,8 +32,30 @@ describe("MainNav", () => {
     ]);
   });
 
-  // describe("When user is logged out", () => {
-  //   it("Prompts user to sign in", () => {
-  //   });
-  // });
+  describe("When user is logged out", () => {
+    it("Prompts user to sign in", () => {
+      const loginButton = wrapper.find("[data-test='sign-in-button']");
+      const profileImage = wrapper.find("[data-test='profile-image']");
+
+      expect(loginButton.exists()).toBe(true);
+      expect(profileImage.exists()).toBe(false);
+    });
+  });
+
+  describe("When user is logged in", () => {
+    it("Should display a profile image", () => {
+      const wrapper = mount(App, {
+        data() {
+          return {
+            isLoggedIn: true,
+          };
+        },
+      });
+      const loginButton = wrapper.find("[data-test='sign-in-button']");
+      const profileImage = wrapper.find("[data-test='profile-image']");
+
+      expect(loginButton.exists()).toBe(false);
+      expect(profileImage.exists()).toBe(true);
+    });
+  });
 });

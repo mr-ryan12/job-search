@@ -1,6 +1,13 @@
 <template>
-  <button v-if="!isLoggedIn" @click="setLogin">Sign In</button>
-  <img v-else :src="toggleProfilePicture" alt="Profile Picture" />
+  <button v-if="!isLoggedIn" data-test="sign-in-button" @click="setLogin">
+    Sign In
+  </button>
+  <img
+    v-else
+    :src="toggleProfilePicture"
+    alt="Profile Picture"
+    data-test="profile-image"
+  />
 </template>
 
 <script>
