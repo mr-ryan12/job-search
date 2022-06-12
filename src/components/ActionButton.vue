@@ -10,10 +10,12 @@ export default {
     text: {
       type: String,
       default: "",
+      required: true,
     },
     type: {
       type: String,
-      default: "",
+      default: "primary",
+      required: false,
     },
   },
   computed: {

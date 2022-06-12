@@ -16,6 +16,7 @@ describe("Action Button", () => {
   it("Should have a primary class", () => {
     const wrapper = mount(ActionButton, {
       props: {
+        text: "Something something dark side",
         type: "primary",
       },
     });
