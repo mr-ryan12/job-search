@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-button {
+.primary {
   background-color: blue;
   color: #fff;
   margin-left: 34rem;

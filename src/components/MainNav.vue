@@ -21,6 +21,7 @@
         <ActionButton
           v-if="!isLoggedIn"
           text="Sign In"
+          button-style="primary"
           :is-logged-in="isLoggedIn"
           @click="$emit('login')"
         />
