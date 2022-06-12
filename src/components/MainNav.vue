@@ -18,7 +18,7 @@
             </li>
           </ul>
         </nav>
-        <LoginButton />
+        <LoginButton :is-logged-in="isLoggedIn" @login="$emit('login')" />
       </div>
     </div>
   </header>
@@ -32,6 +32,12 @@ export default {
   components: {
     LoginButton,
   },
+  props: {
+    isLoggedIn: {
+      type: Boolean,
+    },
+  },
+  emits: ["login"],
   data() {
     return {
       company: "Ryan's Careers",

@@ -1,5 +1,5 @@
 <template>
-  <MainNav />
+  <MainNav :is-logged-in="isLoggedIn" @login="toggleLogin" />
 </template>
 
 <script>
@@ -9,6 +9,16 @@ export default {
   name: "App",
   components: {
     MainNav,
+  },
+  data() {
+    return {
+      isLoggedIn: false,
+    };
+  },
+  methods: {
+    toggleLogin() {
+      this.isLoggedIn = !this.isLoggedIn;
+    },
   },
 };
 </script>

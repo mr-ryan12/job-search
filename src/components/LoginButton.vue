@@ -1,16 +1,26 @@
 <template>
-  <button v-if="!isLoggedIn" @click="toggleLogin">Sign In</button>
-  <img v-else :src="profilePicture" alt="Profile Picture" />
+  <button v-if="!isLoggedIn" @click="setLogin">Sign In</button>
+  <img v-else :src="toggleProfilePicture" alt="Profile Picture" />
 </template>
 
-<script setup>
-import { ref } from "vue";
+<script>
 import profilePicture from "@/assets/profile-picture.png";
 
-const isLoggedIn = ref(false);
-
-const toggleLogin = () => {
-  isLoggedIn.value = !isLoggedIn.value;
+export default {
+  props: {
+    isLoggedIn: {
+      type: Boolean,
+    },
+  },
+  emits: ["login"],
+  computed: {
+    setLogin() {
+      return this.$emit("login");
+    },
+    toggleProfilePicture() {
+      return profilePicture;
+    },
+  },
 };
 </script>
 
