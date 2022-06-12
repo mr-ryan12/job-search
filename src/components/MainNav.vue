@@ -21,25 +21,28 @@
         <ActionButton
           v-if="!isLoggedIn"
           text="Sign In"
-          type="secondary"
+          type="primary"
           :is-logged-in="isLoggedIn"
           @click="$emit('login')"
         />
         <ProfileImage v-else />
       </div>
+      <Subnav />
     </div>
   </header>
 </template>
 
 <script>
-import ActionButton from "./ActionButton.vue";
-import ProfileImage from "./ProfileImage.vue";
+import ActionButton from "@/components/ActionButton.vue";
+import ProfileImage from "@/components/ProfileImage.vue";
+import Subnav from "@/components/Subnav";
 
 export default {
   name: "MainNav",
   components: {
     ActionButton,
     ProfileImage,
+    Subnav,
   },
   props: {
     isLoggedIn: {
