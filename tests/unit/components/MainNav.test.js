@@ -30,4 +30,9 @@ describe("MainNav", () => {
       "Jobs",
     ]);
   });
+
+  // describe("When user is logged out", () => {
+  //   it("Prompts user to sign in", () => {
+  //   });
+  // });
 });
