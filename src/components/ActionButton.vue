@@ -25,6 +25,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+button {
+  font-size: 0.8rem;
+}
+
 .primary {
   background-color: blue;
   color: #fff;
@@ -32,14 +36,9 @@ export default {
   width: 5rem;
   height: 2rem;
   margin-top: 1rem;
-  font-size: 0.8rem;
   border-radius: 5px;
   &:hover {
     box-shadow: 0 0 3px 3px rgb(137, 137, 238);
   }
 }
-
-// .hover {
-//   box-shadow: 0 0 3px 3px rgb(137, 137, 238);
-// }
 </style>
