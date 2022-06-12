@@ -17,6 +17,7 @@ export default {
       default: "primary",
       required: false,
       validator(value) {
+        // must return a Boolean
         return ["primary", "secondary"].includes(value);
       },
     },
