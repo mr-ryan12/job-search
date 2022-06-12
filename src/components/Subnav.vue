@@ -1,6 +1,11 @@
 <template>
   <div class="main-container">
-    <div class="sub-container">this is a subnav</div>
+    <div class="sub-container">
+      <div>
+        <font-awesome-icon :icon="['fas', 'search']" class="icon" />
+        <span><span class="num-of-results">1653</span> jobs matches</span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -24,5 +29,13 @@ export default {
   height: 100%;
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.icon {
+  margin-right: 0.75rem;
+}
+
+.num-of-results {
+  color: #137333;
 }
 </style>
