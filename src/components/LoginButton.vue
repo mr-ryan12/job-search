@@ -1,5 +1,12 @@
 <template>
-  <button v-if="!isLoggedIn" data-test="sign-in-button" @click="setLogin">
+  <button
+    v-if="!isLoggedIn"
+    data-test="sign-in-button"
+    :class="isHovering ? 'hover' : null"
+    @mouseenter="hoverTrue"
+    @mouseleave="hoverFalse"
+    @click="setLogin"
+  >
     Sign In
   </button>
   <img
@@ -20,12 +27,25 @@ export default {
     },
   },
   emits: ["login"],
+  data() {
+    return {
+      isHovering: false,
+    };
+  },
   computed: {
     setLogin() {
       return this.$emit("login");
     },
     toggleProfilePicture() {
       return profilePicture;
+    },
+  },
+  methods: {
+    hoverTrue() {
+      this.isHovering = true;
+    },
+    hoverFalse() {
+      this.isHovering = false;
     },
   },
 };
@@ -48,5 +68,9 @@ img {
   margin-top: 0.4rem;
   margin-left: 35rem;
   right: 200rem;
+}
+
+.hover {
+  box-shadow: 0 0 3px 3px rgb(137, 137, 238);
 }
 </style>
