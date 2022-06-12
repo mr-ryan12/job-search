@@ -18,14 +18,20 @@
             </li>
           </ul>
         </nav>
+        <LoginButton />
       </div>
     </div>
   </header>
 </template>
 
 <script>
+import LoginButton from "./LoginButton.vue";
+
 export default {
   name: "MainNav",
+  components: {
+    LoginButton,
+  },
   data() {
     return {
       company: "Ryan's Careers",
