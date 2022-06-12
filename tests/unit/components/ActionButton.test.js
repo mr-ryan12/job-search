@@ -7,7 +7,7 @@ describe("Action Button", () => {
     const wrapper = mount(ActionButton, {
       props: {
         text: "Something something dark side",
-        type: "Primary",
+        type: "primary",
       },
     });
     expect(wrapper.text()).toMatch("Something something dark side");
