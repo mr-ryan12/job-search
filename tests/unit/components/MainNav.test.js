@@ -3,11 +3,31 @@ import { mount } from "@vue/test-utils";
 import MainNav from "@/components/MainNav.vue";
 
 describe("MainNav", () => {
-  // I used .toContain initially and it seems to work similarly
-  // Maybe lookup the difference between toContain and toMatch
-  it("Should display the company name", () => {
-    const wrapper = mount(MainNav);
+  let wrapper;
 
-    expect(wrapper.text()).toMatch("Bobo Careers");
+  beforeEach(() => {
+    wrapper = mount(MainNav);
+  });
+
+  it("Should display the company name", () => {
+    expect(wrapper.text()).toMatch("Ryan's Careers");
+  });
+
+  it("Should display menu items for navigation", () => {
+    const navigationMenuItems = wrapper.findAll(
+      "[data-test='main-nav-list-item']"
+    );
+    const navigationMenuItemsText = navigationMenuItems.map((item) =>
+      item.text()
+    );
+
+    expect(navigationMenuItemsText).toEqual([
+      "Teams",
+      "Locations",
+      "Life at Ryan Corp",
+      "How we hire",
+      "Students",
+      "Jobs",
+    ]);
   });
 });

@@ -9,7 +9,11 @@
         }}</a>
         <nav>
           <ul>
-            <li v-for="item in menuItems" :key="item">
+            <li
+              v-for="item in menuItems"
+              :key="item"
+              data-test="main-nav-list-item"
+            >
               <a href="">{{ item }}</a>
             </li>
           </ul>
