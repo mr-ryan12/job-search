@@ -1,4 +1,4 @@
-import { mount } from "@vue/test-utils";
+import { mount, shallowMount } from "@vue/test-utils";
 
 import MainNav from "@/components/MainNav.vue";
 import App from "@/App.vue";
@@ -11,7 +11,7 @@ describe("MainNav", () => {
   });
 
   it("Should display the company name", () => {
-    expect(wrapper.text()).toMatch("Ryan's Careers");
+    expect(wrapper.text()).toMatch("Trey's Careers");
   });
 
   it("Should display menu items for navigation", () => {

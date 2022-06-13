@@ -23,11 +23,11 @@
           text="Sign In"
           type="primary"
           :is-logged-in="isLoggedIn"
-          @click="$emit('login')"
+          @click="login"
         />
         <ProfileImage v-else />
       </div>
-      <Subnav />
+      <Subnav v-if="isLoggedIn" />
     </div>
   </header>
 </template>
@@ -44,15 +44,10 @@ export default {
     ProfileImage,
     Subnav,
   },
-  props: {
-    isLoggedIn: {
-      type: Boolean,
-    },
-  },
-  emits: ["login"],
   data() {
     return {
-      company: "Ryan's Careers",
+      isLoggedIn: false,
+      company: "Trey's Careers",
       url: "https://careers.google.com",
       menuItems: [
         "Teams",
@@ -63,6 +58,11 @@ export default {
         "Jobs",
       ],
     };
+  },
+  methods: {
+    login() {
+      this.isLoggedIn = !this.isLoggedIn;
+    },
   },
 };
 </script>

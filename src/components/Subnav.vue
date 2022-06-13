@@ -1,7 +1,7 @@
 <template>
   <div class="main-container">
     <div class="sub-container">
-      <div>
+      <div v-if="onJobResultsPage" data-test="job-count">
         <font-awesome-icon :icon="['fas', 'search']" class="icon" />
         <span><span class="num-of-results">1653</span> jobs matches</span>
       </div>
@@ -12,6 +12,11 @@
 <script>
 export default {
   name: "Subnav",
+  data() {
+    return {
+      onJobResultsPage: true,
+    };
+  },
 };
 </script>
 
