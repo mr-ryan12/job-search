@@ -1,6 +1,8 @@
 <template>
   <section>
-    <h1>{{ action }} for everyone</h1>
+    <h1>
+      <span :class="action.toLowerCase()">{{ action }}</span> for everyone
+    </h1>
     <h2>Find your next job at Trey's Corp</h2>
   </section>
 </template>
@@ -34,3 +36,21 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.build {
+  color: #1a73e8;
+}
+
+.create {
+  color: #34a853;
+}
+
+.design {
+  color: #f9ab00;
+}
+
+.code {
+  color: #d93025;
+}
+</style>
