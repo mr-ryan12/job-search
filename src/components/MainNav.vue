@@ -23,9 +23,10 @@
           text="Sign In"
           type="primary"
           :is-logged-in="isLoggedIn"
+          data-test="sign-in-button"
           @click="login"
         />
-        <ProfileImage v-else />
+        <ProfileImage v-else data-test="profile-image" />
       </div>
       <Subnav v-if="isLoggedIn" />
     </div>

@@ -1,4 +1,4 @@
-import { mount, shallowMount } from "@vue/test-utils";
+import { shallowMount } from "@vue/test-utils";
 
 import MainNav from "@/components/MainNav.vue";
 import App from "@/App.vue";
@@ -7,7 +7,7 @@ describe("MainNav", () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = mount(MainNav);
+    wrapper = shallowMount(MainNav);
   });
 
   it("Should display the company name", () => {
@@ -41,7 +41,6 @@ describe("MainNav", () => {
 
   describe("When user is logged in", () => {
     it("Should display a profile image", async () => {
-      const wrapper = mount(App);
       let loginButton = wrapper.find("[data-test='sign-in-button']");
       let profileImage = wrapper.find("[data-test='profile-image']");
 

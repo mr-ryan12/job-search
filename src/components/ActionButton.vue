@@ -1,5 +1,5 @@
 <template>
-  <button data-test="sign-in-button" :class="type">
+  <button :class="type">
     {{ text }}
   </button>
 </template>
