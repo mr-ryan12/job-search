@@ -1,7 +1,9 @@
 <template>
   <section>
     <h1>
-      <span :class="action.toLowerCase()">{{ action }}</span> for everyone
+      <span :class="actionClass">{{ action }}</span>
+      <br />
+      for everyone
     </h1>
     <h2>Find your next job at Trey's Corp</h2>
   </section>
@@ -19,6 +21,11 @@ export default {
   },
   created() {
     this.changeAction();
+  },
+  computed: {
+    actionClass() {
+      return this.action.toLowerCase();
+    },
   },
   beforeUnmount() {
     clearInterval(this.interval);
