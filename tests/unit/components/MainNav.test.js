@@ -1,7 +1,6 @@
 import { shallowMount } from "@vue/test-utils";
 
 import MainNav from "@/components/MainNav.vue";
-import App from "@/App.vue";
 
 describe("MainNav", () => {
   let wrapper;
