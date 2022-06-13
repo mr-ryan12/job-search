@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>
+    <h1 class="action-header">
       <span :class="actionClass">{{ action }}</span>
       <br />
       for everyone
@@ -59,5 +59,13 @@ export default {
 
 .code {
   color: #d93025;
+}
+
+.action-header {
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  font-size: 6rem;
+  line-height: 1;
+  margin-bottom: 3.5rem;
 }
 </style>
