@@ -12,7 +12,7 @@ export default {};
 .hero {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 91.5vh;
   padding-top: 10px;
   padding-bottom: 80px;
   background-color: yellow;
