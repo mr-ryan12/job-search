@@ -5,7 +5,7 @@
       <br />
       for everyone
     </h1>
-    <h2>Find your next job at Trey's Corp</h2>
+    <h2 class="action-sub-header">Find your next job at Trey's Corp</h2>
   </section>
 </template>
 
@@ -19,13 +19,13 @@ export default {
       interval: null,
     };
   },
-  created() {
-    this.changeAction();
-  },
   computed: {
     actionClass() {
       return this.action.toLowerCase();
     },
+  },
+  created() {
+    this.changeAction();
   },
   beforeUnmount() {
     clearInterval(this.interval);
@@ -67,5 +67,11 @@ export default {
   font-size: 6rem;
   line-height: 1;
   margin-bottom: 3.5rem;
+}
+
+.action-sub-header {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 300;
 }
 </style>
