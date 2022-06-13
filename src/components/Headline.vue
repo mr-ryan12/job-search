@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1 class="action-header">
+    <h1 class="action-header" data-test="action-phrase">
       <span :class="actionClass">{{ action }}</span>
       <br />
       for everyone
