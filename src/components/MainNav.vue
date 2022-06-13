@@ -1,5 +1,5 @@
 <template>
-  <header class="w-full text-sm">
+  <header :class="['w-full', 'text-sm', headerHeightClass]">
     <div class="fixed top-0 left-0 w-full h-16 bg-white">
       <div
         class="flex flex-nowrap h-full px-8 mx-auto border-b border-solid border-brand-gray-1"
@@ -60,6 +60,15 @@ export default {
       ],
     };
   },
+  computed: {
+    headerHeightClass() {
+      // return {
+      //   "h-16": !this.isLoggedIn,
+      //   "h-32": this.isLoggedIn,
+      // };
+      return this.isLoggedIn ? "height-128" : "height-64";
+    },
+  },
   methods: {
     login() {
       this.isLoggedIn = !this.isLoggedIn;
@@ -68,7 +77,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 ul {
   display: flex;
   align-items: center;
@@ -85,5 +94,13 @@ ul {
 
 li > a {
   margin: 1rem;
+}
+
+.height-64 {
+  height: 64px;
+}
+
+.height-128 {
+  height: 128px;
 }
 </style>
