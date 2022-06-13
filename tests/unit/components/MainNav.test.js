@@ -54,5 +54,18 @@ describe("MainNav", () => {
       expect(loginButton.exists()).toBe(false);
       expect(profileImage.exists()).toBe(true);
     });
+
+    it("Should display subnavigation menu with additional information", async () => {
+      const wrapper = shallowMount(MainNav);
+      let subnav = wrapper.find("[data-test='subnav']");
+
+      expect(subnav.exists()).toBe(false);
+
+      const loginButton = wrapper.find("[data-test='sign-in-button']");
+      await loginButton.trigger("click");
+
+      subnav = wrapper.find("[data-test='subnav']");
+      expect(subnav.exists()).toBe(true);
+    });
   });
 });

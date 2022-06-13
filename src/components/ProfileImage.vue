@@ -1,5 +1,5 @@
 <template>
-  <img :src="profilePicture" alt="Profile Picture" />
+  <img :src="profilePicture" alt="Profile Picture" data-test="profile-image" />
 </template>
 
 <script>

@@ -28,7 +28,7 @@
         />
         <ProfileImage v-else data-test="profile-image" />
       </div>
-      <Subnav v-if="isLoggedIn" />
+      <Subnav v-if="isLoggedIn" data-test="subnav" />
     </div>
   </header>
 </template>
