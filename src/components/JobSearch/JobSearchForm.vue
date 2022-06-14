@@ -4,12 +4,20 @@
     <div class="search-container">
       <div class="left-search-container">
         <label class="left-label">Role</label>
-        <TextInput placeholder="Software engineer" class="left-input" />
+        <TextInput
+          placeholder="Software engineer"
+          class="left-input"
+          @handle-input="updateRole"
+        />
       </div>
       <span class="in-container">in</span>
       <div class="right-search-container">
         <label class="right-label">Where?</label>
-        <TextInput placeholder="Los Angeles" class="right-input" />
+        <TextInput
+          placeholder="Los Angeles"
+          class="right-input"
+          @handle-input="updateLocation"
+        />
       </div>
     </div>
     <ActionButton text="Search" type="secondary" class="search-button" />
@@ -31,6 +39,14 @@ export default {
       role: "",
       location: "",
     };
+  },
+  methods: {
+    updateRole(payload) {
+      this.role = payload;
+    },
+    updateLocation(payload) {
+      this.location = payload;
+    },
   },
 };
 </script>

@@ -17,6 +17,7 @@ export default {
       required: false,
     },
   },
+  emits: ["handle-input"],
   data() {
     return {
       value: "",
@@ -24,9 +25,8 @@ export default {
   },
   methods: {
     handleInput($event) {
-      console.log($event);
       this.value = $event.target.value;
-      this.$emit("handle-input");
+      this.$emit("handle-input", this.value);
     },
   },
 };
