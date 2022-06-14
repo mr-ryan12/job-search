@@ -4,22 +4,12 @@
     <div class="search-container">
       <div class="left-search-container">
         <label class="left-label">Role</label>
-        <input
-          v-model="role"
-          type="text"
-          placeholder="Software engineer"
-          class="left-input"
-        />
+        <TextInput placeholder="Software engineer" class="left-input" />
       </div>
       <span class="in-container">in</span>
       <div class="right-search-container">
         <label class="right-label">Where?</label>
-        <input
-          v-model="location"
-          type="text"
-          placeholder="Los Angeles"
-          class="left-input"
-        />
+        <TextInput placeholder="Los Angeles" class="right-input" />
       </div>
     </div>
     <ActionButton text="Search" type="secondary" class="search-button" />
@@ -28,10 +18,13 @@
 
 <script>
 import ActionButton from "@/components/Shared/ActionButton.vue";
+import TextInput from "@/components/Shared/TextInput.vue";
+
 export default {
   name: "JobSearchForm",
   components: {
     ActionButton,
+    TextInput,
   },
   data() {
     return {
