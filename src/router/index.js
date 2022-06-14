@@ -5,7 +5,7 @@ import JobResultsView from "@/views/JobResultsView.vue";
 
 const routes = [
   { path: "/", name: "Home", component: HomeView },
-  { path: "/jobs/results", name: "JobsResults", component: JobResultsView },
+  { path: "/jobs/results", name: "JobResults", component: JobResultsView },
 ];
 
 const router = createRouter({

@@ -14,7 +14,7 @@ export default {
   name: "Subnav",
   computed: {
     onJobResultsPage() {
-      return this.$route.name === "JobsResults";
+      return this.$route.name === "JobResults";
     },
   },
 };
