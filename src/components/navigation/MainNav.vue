@@ -13,10 +13,10 @@
           <ul>
             <li
               v-for="item in menuItems"
-              :key="item"
+              :key="item.text"
               data-test="main-nav-list-item"
             >
-              <a href="">{{ item }}</a>
+              <RouterLink :to="item.url">{{ item.text }}</RouterLink>
             </li>
           </ul>
         </nav>
@@ -51,12 +51,12 @@ export default {
     return {
       isLoggedIn: false,
       menuItems: [
-        "Teams",
-        "Locations",
-        "Life at Ryan Corp",
-        "How we hire",
-        "Students",
-        "Jobs",
+        { text: "Teams", url: "/" },
+        { text: "Locations", url: "/" },
+        { text: "Life at Ryan Corp", url: "/" },
+        { text: "How we hire", url: "/" },
+        { text: "Students", url: "/" },
+        { text: "Jobs", url: "/jobs/results" },
       ],
     };
   },
