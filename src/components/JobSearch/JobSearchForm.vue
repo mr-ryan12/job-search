@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form @submit.prevent="handleSubmit">
     <font-awesome-icon :icon="['fas', 'search']" class="icon" />
     <div class="search-container">
       <div class="left-search-container">
@@ -46,6 +46,15 @@ export default {
     },
     updateLocation(payload) {
       this.location = payload;
+    },
+    handleSubmit() {
+      this.$router.push({
+        name: "JobResults",
+        query: {
+          role: this.role,
+          location: this.location,
+        },
+      });
     },
   },
 };
