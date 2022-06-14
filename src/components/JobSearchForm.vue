@@ -4,12 +4,22 @@
     <div class="search-container">
       <div class="left-search-container">
         <label class="left-label">Role</label>
-        <input type="text" placeholder="Software engineer" class="left-input" />
+        <input
+          v-model="role"
+          type="text"
+          placeholder="Software engineer"
+          class="left-input"
+        />
       </div>
-      <span class="in-container"></span>
+      <span class="in-container">in</span>
       <div class="right-search-container">
         <label class="right-label">Where?</label>
-        <input type="text" placeholder="Los Angeles" class="left-input" />
+        <input
+          v-model="location"
+          type="text"
+          placeholder="Los Angeles"
+          class="left-input"
+        />
       </div>
     </div>
     <ActionButton text="Search" type="secondary" class="search-button" />
@@ -22,6 +32,12 @@ export default {
   name: "JobSearchForm",
   components: {
     ActionButton,
+  },
+  data() {
+    return {
+      role: "",
+      location: "",
+    };
   },
 };
 </script>
