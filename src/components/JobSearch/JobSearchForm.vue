@@ -5,18 +5,18 @@
       <div class="left-search-container">
         <label class="left-label">Role</label>
         <TextInput
+          v-model="role"
           placeholder="Software engineer"
           class="left-input"
-          @handle-input="updateRole"
         />
       </div>
       <span class="in-container">in</span>
       <div class="right-search-container">
         <label class="right-label">Where?</label>
         <TextInput
+          v-model="location"
           placeholder="Los Angeles"
           class="right-input"
-          @handle-input="updateLocation"
         />
       </div>
     </div>
