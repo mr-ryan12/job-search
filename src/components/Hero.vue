@@ -7,7 +7,12 @@
           <Headline />
           <JobSearchForm />
         </div>
-        <div class="col-start-7 col-span-5"></div>
+        <div class="col-start-7 col-span-5">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/2367px-Vue.js_Logo_2.svg.png"
+            alt="Vue Logo"
+          />
+        </div>
         <div class="col-start-12 col-span-1"></div>
       </div>
     </section>
@@ -34,5 +39,15 @@ export default {
   height: 91.5vh;
   padding-top: 10px;
   padding-bottom: 80px;
+}
+
+img {
+  width: 20rem;
+  height: 100%;
+  object-fit: contain;
+  margin: 0;
+  align-self: center;
+  justify-self: center;
+  margin-left: 6rem;
 }
 </style>

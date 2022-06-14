@@ -86,6 +86,7 @@ ul {
   border-bottom: none;
   margin-left: 1rem;
   height: 100%;
+  width: 100%;
 }
 
 .nav-logo {
