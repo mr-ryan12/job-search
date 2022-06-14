@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="headline-container">
     <h1 class="action-header" data-test="action-phrase">
       <span :class="actionClass">{{ action }}</span>
       <br />
@@ -72,5 +72,9 @@ export default {
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 300;
+}
+
+.headline-container {
+  margin-bottom: 4rem;
 }
 </style>
