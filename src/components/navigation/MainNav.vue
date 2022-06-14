@@ -4,9 +4,12 @@
       <div
         class="flex flex-nowrap h-full px-8 mx-auto border-b border-solid border-brand-gray-1"
       >
-        <a :href="url" class="flex items-center h-full text-xl">{{
-          company
-        }}</a>
+        <RouterLink
+          :to="{ name: 'Home' }"
+          :href="url"
+          class="flex items-center h-full text-xl home-nav-link"
+          >Trey's Careers</RouterLink
+        >
         <nav>
           <ul>
             <li
@@ -48,8 +51,6 @@ export default {
   data() {
     return {
       isLoggedIn: false,
-      company: "Trey's Careers",
-      url: "https://careers.google.com",
       menuItems: [
         "Teams",
         "Locations",
@@ -103,5 +104,11 @@ li > a {
 
 .height-128 {
   height: 128px;
+}
+
+.home-nav-link {
+  &:hover {
+    cursor: pointer;
+  }
 }
 </style>
