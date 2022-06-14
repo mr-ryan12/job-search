@@ -6,7 +6,6 @@
       >
         <RouterLink
           :to="{ name: 'Home' }"
-          :href="url"
           class="flex items-center h-full text-xl home-nav-link"
           >Trey's Careers</RouterLink
         >

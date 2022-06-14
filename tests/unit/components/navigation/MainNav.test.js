@@ -1,4 +1,4 @@
-import { shallowMount } from "@vue/test-utils";
+import { shallowMount, RouterLinkStub } from "@vue/test-utils";
 
 import MainNav from "@/components/navigation/MainNav.vue";
 
@@ -6,7 +6,13 @@ describe("MainNav", () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallowMount(MainNav);
+    wrapper = shallowMount(MainNav, {
+      global: {
+        stubs: {
+          RouterLink: RouterLinkStub,
+        },
+      },
+    });
   });
 
   it("Should display the company name", () => {
@@ -56,7 +62,6 @@ describe("MainNav", () => {
     });
 
     it("Should display subnavigation menu with additional information", async () => {
-      const wrapper = shallowMount(MainNav);
       let subnav = wrapper.find("[data-test='subnav']");
 
       expect(subnav.exists()).toBe(false);
