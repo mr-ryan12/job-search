@@ -24,13 +24,11 @@ export default {
       jobs: [],
     };
   },
-  mounted() {
+  async mounted() {
     const url = "http://localhost:3000/jobs";
 
-    axios.get(url).then((response) => {
-      this.jobs = response.data;
-      console.log(this.jobs);
-    });
+    const response = await axios.get(url);
+    this.jobs = response.data;
   },
 };
 </script>
