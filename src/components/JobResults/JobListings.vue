@@ -7,11 +7,13 @@
             <h2 class="job-title">
               Technical Program Manager, Perception, Augmented Reality
             </h2>
-            <div class="company-title">
-              <span>Trey Trey</span>
-            </div>
-            <div>
-              <span>Denver, CO, USA</span>
+            <div class="company-info">
+              <div class="company-title">
+                <span>Trey Trey</span>
+              </div>
+              <div>
+                <span>Denver, CO, USA</span>
+              </div>
             </div>
           </div>
         </RouterLink>
@@ -65,5 +67,10 @@ li {
 
 .company-title {
   margin-right: 1.25rem;
+}
+
+.company-info {
+  display: flex;
+  vertical-align: middle;
 }
 </style>
