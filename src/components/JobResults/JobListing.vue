@@ -3,16 +3,16 @@
     <RouterLink to="/jobs/results/1" class="link">
       <div class="job-title-container">
         <h2 class="job-title">
-          {{ job }}
+          {{ job.title }}
         </h2>
         <div class="company-info">
           <div class="company-title">
-            <span>{{ organization }}</span>
+            <span>{{ job.organization }}</span>
           </div>
           <div>
             <span
-              v-for="location in locations"
-              :key="location + id"
+              v-for="location in job.locations"
+              :key="location"
               class="location-text"
               >{{ location }}</span
             >
@@ -24,11 +24,11 @@
           <h3 class="qualifications-title">Qualifications:</h3>
           <div>
             <ul class="qualifications-list">
-              <li>Bachelor's degree or equivalent practical experience.</li>
-              <li>5 years of experience in program management.</li>
-              <li>
-                Experience analyzing data through querying database (e.g SQL),
-                using spreadsheet software, and creating statistical models.
+              <li
+                v-for="qualification in job.minimumQualifications"
+                :key="qualification"
+              >
+                {{ qualification }}
               </li>
             </ul>
           </div>
@@ -46,26 +46,8 @@ export default {
   name: "JobListing",
   props: {
     job: {
-      type: String,
-      default: "",
-      required: false,
-    },
-    organization: {
-      type: String,
-      default: "",
-      required: false,
-    },
-    id: {
-      type: Number,
-      default: 1,
-      required: false,
-    },
-    locations: {
-      type: Array,
-      default() {
-        return [];
-      },
-      required: false,
+      type: Object,
+      required: true,
     },
   },
 };
