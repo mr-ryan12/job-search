@@ -1,6 +1,6 @@
 <template>
   <li class="list-container">
-    <RouterLink :to="jobPageLink" class="link">
+    <RouterLink :to="jobPageLink" class="link" data-test="job-page-link">
       <div class="job-title-container">
         <h2 class="job-title">
           {{ job.title }}

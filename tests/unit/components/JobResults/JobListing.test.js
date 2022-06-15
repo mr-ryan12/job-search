@@ -7,7 +7,7 @@ describe("Job Results", () => {
     title: "Vue Developer",
     organization: "Air BnB",
     locations: ["Minneapolis"],
-    minimumQualifications: ["Succeed"]
+    minimumQualifications: ["Succeed"],
     ...jobProps,
   });
   const createConfig = (jobProps) => ({
@@ -53,5 +53,13 @@ describe("Job Results", () => {
     expect(wrapper.text()).toMatch("Excellent attention to detail");
     expect(wrapper.text()).toMatch("Willing to learn new tech");
     expect(wrapper.text()).toMatch("Team player");
+  });
+
+  it("Should link to job page", () => {
+    const jobProps = createJobProps({ id: 15 });
+    const wrapper = mount(JobResults, createConfig(jobProps));
+    const jobPageLink = wrapper.findComponent(RouterLinkStub);
+    const toProp = jobPageLink.props("to");
+    expect(toProp).toBe("/jobs/results/15");
   });
 });
