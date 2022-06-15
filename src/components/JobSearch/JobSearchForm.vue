@@ -7,6 +7,7 @@
         <TextInput
           v-model="role"
           placeholder="Software engineer"
+          data-test="role-input"
           class="left-input"
         />
       </div>
@@ -16,11 +17,17 @@
         <TextInput
           v-model="location"
           placeholder="Los Angeles"
+          data-test="location-input"
           class="right-input"
         />
       </div>
     </div>
-    <ActionButton text="Search" type="secondary" class="search-button" />
+    <ActionButton
+      text="Search"
+      type="secondary"
+      data-test="submit-button"
+      class="search-button"
+    />
   </form>
 </template>
 
@@ -41,12 +48,6 @@ export default {
     };
   },
   methods: {
-    updateRole(payload) {
-      this.role = payload;
-    },
-    updateLocation(payload) {
-      this.location = payload;
-    },
     handleSubmit() {
       this.$router.push({
         name: "JobResults",
