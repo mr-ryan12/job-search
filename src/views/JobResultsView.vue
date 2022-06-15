@@ -1,10 +1,14 @@
 <template>
-  <h1 class="about">Job Results View</h1>
+  <JobFiltersSidebar />
 </template>
 
 <script>
+import JobFiltersSidebar from "@/components/JobResults/JobFiltersSidebar/JobFiltersSidebar.vue";
 export default {
   name: "JobResultsView",
+  components: {
+    JobFiltersSidebar,
+  },
 };
 </script>
 
