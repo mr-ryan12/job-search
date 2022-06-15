@@ -1,11 +1,7 @@
-// setTimeout(() => {
-//   console.log("I will print two seconds after the program starts");
-// }, 2000);
+// const axios = require("axios");
 
-// const interval = setInterval(() => {
-//   console.log("I will print every two seconds");
-// }, 2000);
+// const url = "http://localhost:3000/jobs";
 
-// setTimeout(() => {
-//   clearInterval(interval);
-// }, 10000);
+// axios.get(url).then((response) => {
+//   console.log(response.data);
+// });
