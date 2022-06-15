@@ -22,6 +22,7 @@ describe("Job Results", () => {
       },
     },
   });
+
   it("Should display a title", () => {
     const jobProps = createJobProps({ title: "Vue Programmer" });
     const wrapper = mount(JobResults, createConfig(jobProps));
