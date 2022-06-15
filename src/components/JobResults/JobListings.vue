@@ -16,6 +16,27 @@
               </div>
             </div>
           </div>
+          <div class="change-this">
+            <div class="qualifications-container">
+              <h3 class="qualifications-title">Qualifications:</h3>
+              <div>
+                <ul class="qualifications-list">
+                  <li>Bachelor's degree or equivalent practical experience.</li>
+                  <li>5 years of experience in program management.</li>
+                  <li>
+                    Experience analyzing data through querying database (e.g
+                    SQL), using spreadsheet software, and creating statistical
+                    models.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="expand-container">
+              <RouterLink to="/jobs/results/1" class="expand"
+                >Expand</RouterLink
+              >
+            </div>
+          </div>
         </RouterLink>
       </li>
     </ol>
@@ -36,7 +57,7 @@ export default {
 }
 
 li {
-  margin-bottom: 1.75rem;
+  margin-bottom: 0.25rem;
 }
 
 .link {
@@ -72,5 +93,31 @@ li {
 .company-info {
   display: flex;
   vertical-align: middle;
+}
+
+.change-this {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.qualifications-title {
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.qualifications-list {
+  padding-left: 2rem;
+  list-style-type: disc;
+}
+
+.expand-container {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.expand {
+  color: #1967d2;
 }
 </style>
