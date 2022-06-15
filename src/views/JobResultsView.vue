@@ -1,5 +1,7 @@
 <template>
-  <JobFiltersSidebar />
+  <div>
+    <JobFiltersSidebar />
+  </div>
 </template>
 
 <script>
