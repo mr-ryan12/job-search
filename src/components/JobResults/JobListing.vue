@@ -1,6 +1,6 @@
 <template>
   <li class="list-container">
-    <RouterLink to="/jobs/results/1" class="link">
+    <RouterLink :to="jobPageLink" class="link">
       <div class="job-title-container">
         <h2 class="job-title">
           {{ job.title }}
