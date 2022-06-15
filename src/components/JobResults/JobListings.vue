@@ -1,10 +1,14 @@
 <template>
   <main class="job-listings">
     <ol>
-      <JobListing />
-      <JobListing />
-      <JobListing />
-      <JobListing />
+      <JobListing
+        v-for="job in jobs"
+        :id="job.id"
+        :key="job.id"
+        :job="job.title"
+        :organization="job.organization"
+        :locations="job.locations"
+      />
     </ol>
   </main>
 </template>

@@ -3,14 +3,19 @@
     <RouterLink to="/jobs/results/1" class="link">
       <div class="job-title-container">
         <h2 class="job-title">
-          Technical Program Manager, Perception, Augmented Reality
+          {{ job }}
         </h2>
         <div class="company-info">
           <div class="company-title">
-            <span>Trey Trey</span>
+            <span>{{ organization }}</span>
           </div>
           <div>
-            <span>Denver, CO, USA</span>
+            <span
+              v-for="location in locations"
+              :key="location + id"
+              class="location-text"
+              >{{ location }}</span
+            >
           </div>
         </div>
       </div>
@@ -39,6 +44,30 @@
 <script>
 export default {
   name: "JobListing",
+  props: {
+    job: {
+      type: String,
+      default: "",
+      required: false,
+    },
+    organization: {
+      type: String,
+      default: "",
+      required: false,
+    },
+    id: {
+      type: Number,
+      default: 1,
+      required: false,
+    },
+    locations: {
+      type: Array,
+      default() {
+        return [];
+      },
+      required: false,
+    },
+  },
 };
 </script>
 
@@ -106,5 +135,9 @@ export default {
 
 .expand {
   color: #1967d2;
+}
+
+.location-text {
+  margin-right: 0.75rem;
 }
 </style>
