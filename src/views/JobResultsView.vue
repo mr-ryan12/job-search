@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="component-container">
     <JobFiltersSidebar />
     <JobListings />
   </div>
@@ -18,9 +18,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.about {
-  font-size: 3.75rem;
-  line-height: 1;
-  font-weight: 900;
+.component-container {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 </style>
