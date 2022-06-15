@@ -34,7 +34,7 @@
           </div>
         </div>
         <div class="expand-container">
-          <RouterLink :to="jobLink" class="expand">Expand</RouterLink>
+          <RouterLink :to="jobPageLink" class="expand">Expand</RouterLink>
         </div>
       </div>
     </RouterLink>
@@ -51,7 +51,7 @@ export default {
     },
   },
   computed: {
-    jobLink() {
+    jobPageLink() {
       return `/jobs/results/${this.job.id}`;
     },
   },
