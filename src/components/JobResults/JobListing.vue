@@ -1,41 +1,39 @@
 <template>
-  <div>
-    <li>
-      <RouterLink to="/jobs/results/1" class="link">
-        <div class="job-title-container">
-          <h2 class="job-title">
-            Technical Program Manager, Perception, Augmented Reality
-          </h2>
-          <div class="company-info">
-            <div class="company-title">
-              <span>Trey Trey</span>
-            </div>
-            <div>
-              <span>Denver, CO, USA</span>
-            </div>
+  <li class="list-container">
+    <RouterLink to="/jobs/results/1" class="link">
+      <div class="job-title-container">
+        <h2 class="job-title">
+          Technical Program Manager, Perception, Augmented Reality
+        </h2>
+        <div class="company-info">
+          <div class="company-title">
+            <span>Trey Trey</span>
+          </div>
+          <div>
+            <span>Denver, CO, USA</span>
           </div>
         </div>
-        <div class="change-this">
-          <div class="qualifications-container">
-            <h3 class="qualifications-title">Qualifications:</h3>
-            <div>
-              <ul class="qualifications-list">
-                <li>Bachelor's degree or equivalent practical experience.</li>
-                <li>5 years of experience in program management.</li>
-                <li>
-                  Experience analyzing data through querying database (e.g SQL),
-                  using spreadsheet software, and creating statistical models.
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="expand-container">
-            <RouterLink to="/jobs/results/1" class="expand">Expand</RouterLink>
+      </div>
+      <div class="change-this">
+        <div class="qualifications-container">
+          <h3 class="qualifications-title">Qualifications:</h3>
+          <div>
+            <ul class="qualifications-list">
+              <li>Bachelor's degree or equivalent practical experience.</li>
+              <li>5 years of experience in program management.</li>
+              <li>
+                Experience analyzing data through querying database (e.g SQL),
+                using spreadsheet software, and creating statistical models.
+              </li>
+            </ul>
           </div>
         </div>
-      </RouterLink>
-    </li>
-  </div>
+        <div class="expand-container">
+          <RouterLink to="/jobs/results/1" class="expand">Expand</RouterLink>
+        </div>
+      </div>
+    </RouterLink>
+  </li>
 </template>
 
 <script>
@@ -45,8 +43,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-li {
-  margin-bottom: 0.25rem;
+.list-container {
+  margin-bottom: 1.75rem;
 }
 
 .link {
