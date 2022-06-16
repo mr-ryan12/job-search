@@ -10,12 +10,12 @@ describe("JobListings", () => {
     },
   });
 
-  const createStore = (storeParams = {}) => ({
+  const createStore = (config = {}) => ({
     state: {
       jobs: Array(15).fill({}),
     },
     dispatch: jest.fn(),
-    ...storeParams,
+    ...config,
   });
 
   const createConfig = ($route, $store) => ({
@@ -30,10 +30,25 @@ describe("JobListings", () => {
     },
   });
 
+  describe("Mounted", () => {
+    it("Should invoke the dispatch method with the correct arguments", () => {
+      const $route = createRoute();
+      const dispatch = jest.fn();
+      const $store = createStore({ dispatch });
+      shallowMount(JobListings, createConfig($route, $store));
+      expect(dispatch).toHaveBeenCalledWith("FETCH_JOBS");
+    });
+  });
+
   it("Should create job listings for a maximum of 10 jobs", async () => {
     const queryParams = { page: "1" };
     const $route = createRoute(queryParams);
-    const $store = createStore();
+    const numberOfJohsInStore = 15;
+    const $store = createStore({
+      state: {
+        jobs: Array(numberOfJohsInStore).fill({}),
+      },
+    });
     const wrapper = shallowMount(JobListings, createConfig($route, $store));
     await flushPromises();
     const jobListings = wrapper.findAll("[data-test='job-listing']");
