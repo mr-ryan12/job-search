@@ -63,7 +63,7 @@ describe("MainNav", () => {
       expect(profileImage.exists()).toBe(true);
     });
 
-    it("Should display subnavigation menu with additional information", async () => {
+    it("Should display subnavigation menu with additional information", () => {
       const store = createStore({
         state() {
           return {
