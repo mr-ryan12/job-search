@@ -43,7 +43,7 @@ describe("MainNav", () => {
     it("Prompts user to sign in", () => {
       const store = createStore();
       const wrapper = shallowMount(MainNav, createConfig(store));
-      const loginButton = wrapper.find("[data-test='sign-in-button']");
+      const loginButton = wrapper.find("[data-test='login-button']");
       expect(loginButton.exists()).toBe(true);
     });
   });
@@ -74,6 +74,20 @@ describe("MainNav", () => {
       const wrapper = shallowMount(MainNav, createConfig(store));
       const subnav = wrapper.find("[data-test='subnav']");
       expect(subnav.exists()).toBe(true);
+    });
+  });
+
+  describe("When user is logged out", () => {
+    it("Issues call to Vuex to login user", async () => {
+      const store = createStore();
+      const commit = jest.fn();
+      store.commit = commit;
+      const wrapper = shallowMount(MainNav, createConfig(store));
+      const loginButton = wrapper.find("[data-test='login-button']");
+
+      await loginButton.trigger("click");
+
+      expect(commit).toHaveBeenCalledWith("LOGIN_USER");
     });
   });
 });

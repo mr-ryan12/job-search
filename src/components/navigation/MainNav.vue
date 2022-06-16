@@ -25,7 +25,7 @@
           text="Sign In"
           type="primary"
           :is-logged-in="isLoggedIn"
-          data-test="sign-in-button"
+          data-test="login-button"
           @click="login"
         />
         <ProfileImage v-else data-test="profile-image" />
