@@ -43,11 +43,6 @@ export default {
   components: {
     JobListing,
   },
-  // data() {
-  //   return {
-  //     jobs: [],
-  //   };
-  // },
   computed: {
     currentPage() {
       const pageString = this.$route.query.page || 1;
