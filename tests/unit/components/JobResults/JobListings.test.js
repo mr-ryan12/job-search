@@ -32,7 +32,7 @@ describe("JobListings", () => {
     axios.get.mockResolvedValue({ data: [] });
     const $route = createRoute();
     shallowMount(JobListings, createConfig($route));
-    expect(axios.get).toHaveBeenCalledWith("http://localhost:3000/jobs");
+    expect(axios.get).toHaveBeenCalledWith("http://mytotallyfakeapi.com/jobs");
   });
 
   it("Should create job listings for a maximum of 10 jobs", async () => {
