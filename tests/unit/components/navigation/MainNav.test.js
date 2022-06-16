@@ -4,9 +4,11 @@ import { createStore } from "vuex";
 import MainNav from "@/components/navigation/MainNav.vue";
 
 describe("MainNav", () => {
-  const createConfig = (store) => ({
+  const createConfig = ($store) => ({
     global: {
-      plugins: [store],
+      mocks: {
+        $store,
+      },
       stubs: {
         RouterLink: RouterLinkStub,
       },
@@ -14,8 +16,12 @@ describe("MainNav", () => {
   });
 
   it("Should display the company name", () => {
-    const store = createStore();
-    const wrapper = shallowMount(MainNav, createConfig(store));
+    const $store = {
+      state: {
+        isLoggedIn: false,
+      }
+    };
+    const wrapper = shallowMount(MainNav, createConfig($store));
     expect(wrapper.text()).toMatch("Trey's Careers");
   });
 
