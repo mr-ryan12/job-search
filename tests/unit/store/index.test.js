@@ -20,4 +20,12 @@ describe("mutations", () => {
       expect(state).toEqual({ isLoggedIn: true });
     });
   });
+
+  describe("RECEIVE_JOBS", () => {
+    it("Should receive jobs from API response", () => {
+      const state = { jobs: [] };
+      mutations.RECEIVE_JOBS(state, ["Job 1", "Job 2"]);
+      expect(state.jobs).toEqual(["Job 1", "Job 2"]);
+    });
+  });
 });
