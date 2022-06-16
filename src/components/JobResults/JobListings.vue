@@ -16,12 +16,14 @@
             v-if="previousPage"
             :to="{ name: 'JobResults', query: { page: previousPage } }"
             class="previous"
+            data-test="previous-page-link"
             >Previous</RouterLink
           >
           <RouterLink
             v-if="nextPage"
             :to="{ name: 'JobResults', query: { page: nextPage } }"
             class="next"
+            data-test="next-page-link"
             >Next</RouterLink
           >
         </div>
@@ -57,7 +59,7 @@ export default {
     },
     nextPage() {
       const nextPage = this.currentPage + 1;
-      const maxPage = this.jobs.length / 10;
+      const maxPage = Math.ceil(this.jobs.length / 10);
 
       return nextPage <= maxPage ? nextPage : undefined;
     },
