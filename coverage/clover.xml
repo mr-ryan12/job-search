@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1655346560551" clover="3.2.0">
-  <project timestamp="1655346560551" name="All files">
-    <metrics statements="19" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="7" elements="27" coveredelements="25" complexity="0" loc="19" ncloc="19" packages="6" files="7" classes="7"/>
+<coverage generated="1655347025521" clover="3.2.0">
+  <project timestamp="1655347025521" name="All files">
+    <metrics statements="20" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="7" elements="28" coveredelements="26" complexity="0" loc="20" ncloc="20" packages="6" files="7" classes="7"/>
     <package name="assets">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="profile-picture.png" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/assets/profile-picture.png">
@@ -40,14 +40,15 @@
       </file>
     </package>
     <package name="store">
-      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="index.js" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/store/index.js">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
       </file>
     </package>
     <package name="utils">

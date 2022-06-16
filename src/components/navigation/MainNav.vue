@@ -39,6 +39,7 @@
 import ActionButton from "@/components/Shared/ActionButton.vue";
 import ProfileImage from "@/components/navigation/ProfileImage.vue";
 import Subnav from "@/components//navigation/Subnav";
+import { LOGIN_USER } from "@/store";
 
 export default {
   name: "MainNav",
@@ -61,10 +62,6 @@ export default {
   },
   computed: {
     headerHeightClass() {
-      // return {
-      //   "h-16": !this.isLoggedIn,
-      //   "h-32": this.isLoggedIn,
-      // };
       return this.isLoggedIn ? "height-128" : "height-64";
     },
     isLoggedIn() {
@@ -73,7 +70,7 @@ export default {
   },
   methods: {
     login() {
-      this.$store.commit("LOGIN_USER");
+      this.$store.commit(LOGIN_USER);
     },
   },
 };
