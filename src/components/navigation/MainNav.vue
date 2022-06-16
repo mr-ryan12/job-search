@@ -49,7 +49,6 @@ export default {
   },
   data() {
     return {
-      isLoggedIn: false,
       menuItems: [
         { text: "Teams", url: "/" },
         { text: "Locations", url: "/" },
@@ -68,10 +67,13 @@ export default {
       // };
       return this.isLoggedIn ? "height-128" : "height-64";
     },
+    isLoggedIn() {
+      return this.$store.state.isLoggedIn;
+    },
   },
   methods: {
     login() {
-      this.isLoggedIn = !this.isLoggedIn;
+      this.$store.commit("LOGIN_USER");
     },
   },
 };
