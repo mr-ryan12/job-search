@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1655401309651" clover="3.2.0">
-  <project timestamp="1655401309651" name="All files">
-    <metrics statements="25" coveredstatements="24" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="8" elements="34" coveredelements="32" complexity="0" loc="25" ncloc="25" packages="7" files="8" classes="8"/>
+<coverage generated="1655401928818" clover="3.2.0">
+  <project timestamp="1655401928818" name="All files">
+    <metrics statements="24" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="8" elements="33" coveredelements="31" complexity="0" loc="24" ncloc="24" packages="7" files="8" classes="8"/>
     <package name="api">
-      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="getJobs.js" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/api/getJobs.js">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
       </file>
     </package>
     <package name="assets">
@@ -56,10 +55,10 @@
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="3" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
       </file>
     </package>
     <package name="utils">

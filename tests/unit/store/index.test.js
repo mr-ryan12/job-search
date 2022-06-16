@@ -5,6 +5,11 @@ describe("State", () => {
     const startingState = state();
     expect(startingState.isLoggedIn).toBe(false);
   });
+
+  it("Should store job listings", () => {
+    const startingState = state();
+    expect(startingState.jobs).toEqual([]);
+  });
 });
 
 describe("mutations", () => {
