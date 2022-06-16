@@ -36,9 +36,12 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 import ActionButton from "@/components/Shared/ActionButton.vue";
 import ProfileImage from "@/components/navigation/ProfileImage.vue";
 import Subnav from "@/components//navigation/Subnav";
+
 import { LOGIN_USER } from "@/store";
 
 export default {
@@ -64,9 +67,7 @@ export default {
     headerHeightClass() {
       return this.isLoggedIn ? "height-128" : "height-64";
     },
-    isLoggedIn() {
-      return this.$store.state.isLoggedIn;
-    },
+    ...mapState(["isLoggedIn"]),
   },
   methods: {
     login() {
