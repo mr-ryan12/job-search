@@ -1,0 +1,29 @@
+<template>
+  <div class="header-container">
+    <div class="text-container">
+      <slot name="title">Sample Title</slot>
+      <slot name="subtitle">Sample Subttile</slot>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "HeaderContainer",
+};
+</script>
+
+<style lang="scss" scoped>
+.header-container {
+  width: 100%;
+  border-bottom: 5px solid #dadcd0;
+}
+
+.text-container {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+</style>
