@@ -7,9 +7,11 @@
           <ActionButton text="Clear Filters" type="secondary" />
         </div>
       </div>
-      <Accordion header="Things n stuff">
-        <h3>Doin stuff with the things</h3>
+      <Accordion header="Doin' stuff" />
+      <Accordion header="With the things">
+        <p>Placeholder for now</p>
       </Accordion>
+
       <JobFiltersSidebarOrganizations />
     </section>
   </div>
