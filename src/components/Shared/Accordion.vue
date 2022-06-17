@@ -1,7 +1,7 @@
 <template>
   <div class="accordion-container">
     <div class="header-container" @click="toggleContainer">
-      <h3>Organizations</h3>
+      <h3 class="font-semibold">{{ header }}</h3>
       <font-awesome-icon :icon="carotIcon" />
     </div>
 
@@ -14,6 +14,12 @@
 <script>
 export default {
   name: "Accordion",
+  props: {
+    header: {
+      type: String,
+      required: true,
+    },
+  },
   data() {
     return {
       isOpen: false,

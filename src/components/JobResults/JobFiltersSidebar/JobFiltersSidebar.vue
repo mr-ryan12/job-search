@@ -7,7 +7,10 @@
           <ActionButton text="Clear Filters" type="secondary" />
         </div>
       </div>
-      <Accordion>
+      <Accordion header="Things n stuff">
+        <h3>Doin stuff with the things</h3>
+      </Accordion>
+      <Accordion header="Organization">
         <div class="checkbox-container">
           <fieldset>
             <ul class="list-container">
