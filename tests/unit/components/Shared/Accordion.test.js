@@ -22,4 +22,22 @@ describe("Accordion", () => {
     await clickableArea.trigger("click");
     expect(wrapper.text()).toMatch("My nested child");
   });
+
+  describe("Default slot content", () => {
+    it("Should render default content", async () => {
+      const wrapper = mount(Accordion, {
+        global: {
+          stubs: {
+            FontAwesomeIcon: true,
+          },
+        },
+        props: {
+          header: "Test Header",
+        },
+      });
+      const clickableArea = wrapper.find("[data-test='clickable-area']");
+      await clickableArea.trigger("click");
+      expect(wrapper.text()).toMatch("Whoops, somebody forgot to populate me!");
+    });
+  });
 });
