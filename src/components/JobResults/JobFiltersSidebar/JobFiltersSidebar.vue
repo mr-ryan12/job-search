@@ -3,11 +3,9 @@
     <section class="what-do-you-want-to-do-container">
       <div class="what-do-you-want-to-do-header">
         <h3 class="header-text">What do you want to do?</h3>
-        <ActionButton
-          text="Clear Filters"
-          type="secondary"
-          class="action-button"
-        />
+        <div class="action-button-container">
+          <ActionButton text="Clear Filters" type="secondary" />
+        </div>
       </div>
     </section>
   </div>
@@ -49,7 +47,9 @@ export default {
   font-weight: 900;
 }
 
-.action-button {
+.action-button-container {
+  display: flex;
+  align-items: center;
   font-weight: 600;
 }
 </style>
