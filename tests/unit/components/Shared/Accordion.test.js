@@ -5,8 +5,10 @@ import Accordion from "@/components/Shared/Accordion.vue";
 describe("Accordion", () => {
   it("Should render child", async () => {
     const wrapper = mount(Accordion, {
-      stubs: {
-        FontAwesomeIcon: true,
+      global: {
+        stubs: {
+          FontAwesomeIcon: true,
+        },
       },
       props: {
         header: "Test Header",
