@@ -5,7 +5,7 @@ jest.mock("axios");
 import Spotlight from "@/components/JobSearch/Spotlight.vue";
 
 describe("Spotlight", () => {
-  it("Should have an image", async () => {
+  const mockSpotlightResponse = (data = {}) => {
     axios.get.mockResolvedValue({
       data: [
         {
@@ -14,9 +14,13 @@ describe("Spotlight", () => {
           title: "Cloud Engineering",
           description:
             "Build fun stuff in the cloud. It's a lot of fun, we promise!",
+          ...data,
         },
       ],
     });
+  };
+  it("Should have an image", async () => {
+    mockSpotlightResponse({ image: "Some Image" });
     const wrapper = mount(Spotlight, {
       slots: {
         default: `
@@ -31,17 +35,7 @@ describe("Spotlight", () => {
   });
 
   it("Should have a title", async () => {
-    axios.get.mockResolvedValue({
-      data: [
-        {
-          id: 1,
-          img: "Some Image",
-          title: "Cloud Engineering",
-          description:
-            "Build fun stuff in the cloud. It's a lot of fun, we promise!",
-        },
-      ],
-    });
+    mockSpotlightResponse({ title: "Cloud Engineering" });
     const wrapper = mount(Spotlight, {
       slots: {
         default: `
@@ -56,16 +50,9 @@ describe("Spotlight", () => {
   });
 
   it("Should have a description", async () => {
-    axios.get.mockResolvedValue({
-      data: [
-        {
-          id: 1,
-          img: "Some Image",
-          title: "Cloud Engineering",
-          description:
-            "Build fun stuff in the cloud. It's a lot of fun, we promise!",
-        },
-      ],
+    mockSpotlightResponse({
+      description:
+        "Build fun stuff in the cloud. It's a lot of fun, we promise!",
     });
     const wrapper = mount(Spotlight, {
       slots: {
