@@ -9,7 +9,9 @@
             class="list-element"
           >
             <input :id="organization" type="checkbox" />
-            <label :for="organization" class="label">{{ organization }}</label>
+            <label :for="organization" class="label" data-test="organization">{{
+              organization
+            }}</label>
           </li>
         </ul>
       </fieldset>
