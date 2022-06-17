@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1655432889892" clover="3.2.0">
-  <project timestamp="1655432889892" name="All files">
-    <metrics statements="34" coveredstatements="33" conditionals="2" coveredconditionals="2" methods="14" coveredmethods="13" elements="50" coveredelements="48" complexity="0" loc="34" ncloc="34" packages="7" files="9" classes="9"/>
+<coverage generated="1655435735983" clover="3.2.0">
+  <project timestamp="1655435735983" name="All files">
+    <metrics statements="35" coveredstatements="34" conditionals="2" coveredconditionals="2" methods="14" coveredmethods="13" elements="51" coveredelements="49" complexity="0" loc="35" ncloc="35" packages="7" files="10" classes="10"/>
     <package name="api">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="getJobs.js" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/api/getJobs.js">
@@ -28,7 +28,7 @@
       </file>
     </package>
     <package name="components.Shared">
-      <metrics statements="9" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="5"/>
+      <metrics statements="10" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="5"/>
       <file name="Accordion.vue" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/components/Shared/Accordion.vue">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
         <line num="21" count="1" type="stmt"/>
@@ -41,6 +41,10 @@
         <line num="8" count="3" type="stmt"/>
         <line num="21" count="7" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
+      </file>
+      <file name="HeaderContainer.vue" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/components/Shared/HeaderContainer.vue">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="11" count="1" type="stmt"/>
       </file>
       <file name="TextInput.vue" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/components/Shared/TextInput.vue">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
