@@ -1,9 +1,9 @@
 <template>
   <HeaderContainer>
-    <template v-slot:title>
+    <template #title>
       <h1>Teams</h1>
     </template>
-    <template v-slot:subtitle>
+    <template #subtitle>
       <h2>It's totally awesome so you should probably work here</h2>
     </template>
   </HeaderContainer>
