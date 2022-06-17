@@ -2,7 +2,7 @@
   <div class="header-container">
     <div class="text-container">
       <slot name="title">Sample Title</slot>
-      <slot name="subtitle">Sample Subttile</slot>
+      <slot name="subtitle">Sample Subtitle</slot>
     </div>
   </div>
 </template>
@@ -16,7 +16,7 @@ export default {
 <style lang="scss" scoped>
 .header-container {
   width: 100%;
-  border-bottom: 5px solid #dadcd0;
+  border-bottom: 1px solid #dadcd0;
 }
 
 .text-container {
