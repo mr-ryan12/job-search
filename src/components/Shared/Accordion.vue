@@ -1,6 +1,10 @@
 <template>
   <div class="accordion-container">
-    <div class="header-container" @click="toggleContainer">
+    <div
+      class="header-container"
+      data-test="clickable-area"
+      @click="toggleContainer"
+    >
       <h3 class="font-semibold">{{ header }}</h3>
       <font-awesome-icon :icon="carotIcon" />
     </div>
