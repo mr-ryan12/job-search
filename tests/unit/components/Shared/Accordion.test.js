@@ -28,12 +28,10 @@ describe("Accordion", () => {
 
   describe("Default slot content", () => {
     it("Should render default content", async () => {
-      const wrapper = mount(
-        Accordion,
-        createConfig({
-          slots: { default: "Whoops, somebody forgot to populate me!" },
-        })
-      );
+      const slots = {
+        default: "Whoops, somebody forgot to populate me!",
+      };
+      const wrapper = mount(Accordion, createConfig({ slots }));
       const clickableArea = wrapper.find("[data-test='clickable-area']");
       await clickableArea.trigger("click");
       expect(wrapper.text()).toMatch("Whoops, somebody forgot to populate me!");
