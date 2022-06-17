@@ -3,11 +3,15 @@
     <div class="checkbox-container">
       <fieldset>
         <ul class="list-container">
-          <li class="list-element">
-            <input id="VueTube" type="checkbox" />
-            <label for="VueTube" class="label">VueTube</label>
+          <li
+            v-for="organization in setOrganizations"
+            :key="organization"
+            class="list-element"
+          >
+            <input :id="organization" type="checkbox" />
+            <label :for="organization" class="label">{{ organization }}</label>
           </li>
-          <li class="list-element">
+          <!-- <li class="list-element">
             <input id="Vue and Me" type="checkbox" />
             <label for="Vue and Me" class="label">Vue and Me</label>
           </li>
@@ -24,7 +28,7 @@
           <li class="list-element">
             <input id="Vue stuff" type="checkbox" />
             <label for="Vue stuff" class="label">Vue stuff</label>
-          </li>
+          </li> -->
         </ul>
       </fieldset>
     </div>
@@ -37,6 +41,11 @@ export default {
   name: "JobFiltersSidebarOrganizations",
   components: {
     Accordion,
+  },
+  computed: {
+    setOrganizations() {
+      return this.$store.getters["UNIQUE_ORGANIZATIONS"];
+    },
   },
 };
 </script>
