@@ -29,4 +29,56 @@ describe("Spotlight", () => {
     await flushPromises();
     expect(wrapper.text()).toMatch("Some Image");
   });
+
+  it("Should have a title", async () => {
+    axios.get.mockResolvedValue({
+      data: [
+        {
+          id: 1,
+          img: "Some Image",
+          title: "Cloud Engineering",
+          description:
+            "Build fun stuff in the cloud. It's a lot of fun, we promise!",
+        },
+      ],
+    });
+    const wrapper = mount(Spotlight, {
+      slots: {
+        default: `
+          <template #default="slotProps">
+            <h1>{{ slotProps.spotlight.title }}</h1>
+          </template>
+        `,
+      },
+    });
+    await flushPromises();
+    expect(wrapper.text()).toMatch("Cloud Engineering");
+  });
+
+  it("Should have a description", async () => {
+    axios.get.mockResolvedValue({
+      data: [
+        {
+          id: 1,
+          img: "Some Image",
+          title: "Cloud Engineering",
+          description:
+            "Build fun stuff in the cloud. It's a lot of fun, we promise!",
+        },
+      ],
+    });
+    const wrapper = mount(Spotlight, {
+      slots: {
+        default: `
+          <template #default="slotProps">
+            <h1>{{ slotProps.spotlight.description }}</h1>
+          </template>
+        `,
+      },
+    });
+    await flushPromises();
+    expect(wrapper.text()).toMatch(
+      "Build fun stuff in the cloud. It's a lot of fun, we promise!"
+    );
+  });
 });
