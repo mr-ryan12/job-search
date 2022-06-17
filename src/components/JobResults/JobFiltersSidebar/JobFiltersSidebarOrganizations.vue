@@ -11,24 +11,6 @@
             <input :id="organization" type="checkbox" />
             <label :for="organization" class="label">{{ organization }}</label>
           </li>
-          <!-- <li class="list-element">
-            <input id="Vue and Me" type="checkbox" />
-            <label for="Vue and Me" class="label">Vue and Me</label>
-          </li>
-          <li class="list-element">
-            <input id="Et Vue Brute" type="checkbox" />
-            <label for="Et Vue Brute" class="label">Et Vue Brute</label>
-          </li>
-          <li class="list-element">
-            <input id="Vue and a half men" type="checkbox" />
-            <label for="Vue and a half men" class="label"
-              >Vue and a half men</label
-            >
-          </li>
-          <li class="list-element">
-            <input id="Vue stuff" type="checkbox" />
-            <label for="Vue stuff" class="label">Vue stuff</label>
-          </li> -->
         </ul>
       </fieldset>
     </div>
@@ -44,7 +26,7 @@ export default {
   },
   computed: {
     setOrganizations() {
-      return this.$store.getters["UNIQUE_ORGANIZATIONS"];
+      return this.$store.getters.UNIQUE_ORGANIZATIONS;
     },
   },
 };
