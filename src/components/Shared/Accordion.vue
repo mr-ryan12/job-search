@@ -5,7 +5,9 @@
       <font-awesome-icon :icon="carotIcon" />
     </div>
 
-    <div v-if="isOpen" class="open-contents">Child</div>
+    <div v-if="isOpen" class="open-contents">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
