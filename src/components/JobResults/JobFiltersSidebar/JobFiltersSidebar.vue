@@ -8,15 +8,18 @@
         </div>
       </div>
     </section>
+    <Accordion />
   </div>
 </template>
 
 <script>
 import ActionButton from "@/components/Shared/ActionButton.vue";
+import Accordion from "@/components/Shared/Accordion.vue";
 export default {
   name: "JobFiltersSidebar",
   components: {
     ActionButton,
+    Accordion,
   },
 };
 </script>
