@@ -1,6 +1,6 @@
 <template>
-  <div class="accordion-container" @click="toggleContainer">
-    <div class="header-container">
+  <div class="accordion-container">
+    <div class="header-container" @click="toggleContainer">
       <h3>Organizations</h3>
       <font-awesome-icon :icon="carotIcon" />
     </div>
