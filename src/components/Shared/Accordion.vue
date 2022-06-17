@@ -2,12 +2,7 @@
   <div class="accordion-container" @click="toggleContainer">
     <div class="header-container">
       <h3>Organizations</h3>
-      <font-awesome-icon
-        v-if="!isOpen"
-        :icon="['fas', 'angle-down']"
-        class="down-icon"
-      />
-      <font-awesome-icon v-else :icon="['fas', 'angle-up']" class="up-icon" />
+      <font-awesome-icon :icon="carotIcon" />
     </div>
 
     <div v-if="isOpen" class="open-contents">Child</div>
@@ -21,6 +16,11 @@ export default {
     return {
       isOpen: false,
     };
+  },
+  computed: {
+    carotIcon() {
+      return this.isOpen ? ["fas", "angle-up"] : ["fas", "angle-down"];
+    },
   },
   methods: {
     toggleContainer() {
