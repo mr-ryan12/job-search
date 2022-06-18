@@ -24,4 +24,11 @@ describe("mutations", () => {
       expect(state.selectedOrganizations).toEqual(["Org 1", "Org 2"]);
     });
   });
+  describe("ADD_SELECTED_JOB_TYPES", () => {
+    it("Updates organizations by user's filter choice", () => {
+      const state = { selectedJobTypes: [] };
+      mutations.ADD_SELECTED_JOB_TYPES(state, ["Developer", "Design"]);
+      expect(state.selectedJobTypes).toEqual(["Developer", "Design"]);
+    });
+  });
 });
