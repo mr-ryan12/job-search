@@ -13,16 +13,19 @@
 </template>
 
 <script>
-import { computed } from "vue";
-import { useStore } from "vuex";
+// import { computed } from "vue";
+// import { useStore } from "vuex";
+import { useFilteredJobs } from "@/store/composables.js";
 
 import useConfirmRoute from "@/composables/useConfirmRoute.js";
+// import { FILTER_JOBS } from "@/store/constants";
 
 export default {
   name: "Subnav",
   setup() {
-    const store = useStore();
-    const FILTERED_JOBS = computed(() => store.getters.FILTER_JOBS);
+    // const store = useStore();
+    // const FILTERED_JOBS = computed(() => store.getters.FILTER_JOBS);
+    const FILTERED_JOBS = useFilteredJobs();
 
     const onJobResultsPage = useConfirmRoute("JobResults");
 
