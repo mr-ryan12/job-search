@@ -4,7 +4,7 @@
       <fieldset>
         <ul class="list-container">
           <li
-            v-for="organization in setOrganizations"
+            v-for="organization in UNIQUE_ORGANIZATIONS"
             :key="organization"
             class="list-element"
           >
@@ -20,16 +20,19 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import Accordion from "@/components/Shared/Accordion.vue";
+import { UNIQUE_ORGANIZATIONS } from "@/store";
 export default {
   name: "JobFiltersSidebarOrganizations",
   components: {
     Accordion,
   },
   computed: {
-    setOrganizations() {
-      return this.$store.getters.UNIQUE_ORGANIZATIONS;
-    },
+    ...mapGetters([UNIQUE_ORGANIZATIONS]),
+    // setOrganizations() {
+    //   return this.$store.getters.UNIQUE_ORGANIZATIONS;
+    // },
   },
 };
 </script>
