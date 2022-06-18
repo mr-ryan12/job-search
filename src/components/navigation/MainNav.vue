@@ -44,8 +44,6 @@ import ProfileImage from "@/components/navigation/ProfileImage.vue";
 import Subnav from "@/components//navigation/Subnav";
 import { LOGIN_USER } from "@/store/constants";
 
-// import { LOGIN_USER } from "@/store";
-
 export default {
   name: "MainNav",
   components: {
