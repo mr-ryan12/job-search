@@ -1,4 +1,4 @@
-import state from "@store";
+import state from "@/store/state";
 
 describe("State", () => {
   it("Should have a login property", () => {
@@ -14,5 +14,10 @@ describe("State", () => {
   it("Stores organizations that the user would like to filter jobs by", () => {
     const startingState = state();
     expect(startingState.selectedOrganizations).toEqual([]);
+  });
+
+  it("Should store job types", () => {
+    const startingState = state();
+    expect(startingState.selectedJobTypes).toEqual([]);
   });
 });
