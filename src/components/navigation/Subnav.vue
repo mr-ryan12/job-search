@@ -13,20 +13,20 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-
-import { FILTER_JOBS } from "@/store/constants";
+import { computed } from "vue";
+import { useRoute } from "vue-router";
+import { useStore } from "vuex";
 
 export default {
   name: "Subnav",
-  computed: {
-    ...mapGetters([FILTER_JOBS]),
-    onJobResultsPage() {
-      return this.$route.name === "JobResults";
-    },
-    filteredJobsLength() {
-      return this.FILTER_JOBS.length;
-    },
+  setup() {
+    const route = useRoute();
+    const store = useStore();
+
+    const onJobResultsPage = computed(() => route.name === "JobResults");
+    const filteredJobsLength = computed(() => store.getters.FILTER_JOBS.length);
+
+    return { onJobResultsPage, filteredJobsLength };
   },
 };
 </script>
