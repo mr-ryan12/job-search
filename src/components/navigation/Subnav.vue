@@ -21,9 +21,7 @@ export default {
   name: "Subnav",
   setup() {
     const FILTERED_JOBS = useFilteredJobs();
-
     const onJobResultsPage = useConfirmRoute("JobResults");
-
     return { onJobResultsPage, FILTERED_JOBS };
   },
 };
