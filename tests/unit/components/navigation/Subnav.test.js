@@ -1,5 +1,3 @@
-import { ref } from "vue";
-
 import { mount } from "@vue/test-utils";
 import { useStore } from "vuex";
 import useConfirmRoute from "@/composables/useConfirmRoute";
@@ -20,7 +18,7 @@ describe("Subnav", () => {
 
   describe("When user is on job page", () => {
     it("Should display job count", () => {
-      useConfirmRoute.mockReturnValue(ref(true));
+      useConfirmRoute.mockReturnValue(true);
       useStore.mockReturnValue({
         getters: {
           FILTER_JOBS: [{ id: 1 }, { id: 2 }],
@@ -44,7 +42,7 @@ describe("Subnav", () => {
 
   describe("When user is not on job page", () => {
     it("Should not display job count", () => {
-      useConfirmRoute.mockReturnValue(ref(false));
+      useConfirmRoute.mockReturnValue(false);
       const wrapper = mount(Subnav, createConfig());
       const jobCount = wrapper.find("[data-test='job-count']");
       expect(jobCount.exists()).toBe(false);
