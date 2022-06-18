@@ -4,6 +4,7 @@ export const LOGIN_USER = "LOGIN_USER";
 // Jobs
 export const RECEIVE_JOBS = "RECEIVE_JOBS";
 export const FETCH_JOBS = "FETCH_JOBS";
+export const FILTER_JOBS = "FILTER_JOBS";
 
 // Organizations
 export const UNIQUE_ORGANIZATIONS = "UNIQUE_ORGANIZATIONS";
