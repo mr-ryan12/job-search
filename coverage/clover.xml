@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1655590829671" clover="3.2.0">
-  <project timestamp="1655590829671" name="All files">
-    <metrics statements="50" coveredstatements="50" conditionals="4" coveredconditionals="4" methods="21" coveredmethods="21" elements="75" coveredelements="75" complexity="0" loc="50" ncloc="50" packages="6" files="11" classes="11"/>
+<coverage generated="1655592033523" clover="3.2.0">
+  <project timestamp="1655592033523" name="All files">
+    <metrics statements="53" coveredstatements="53" conditionals="4" coveredconditionals="4" methods="23" coveredmethods="23" elements="80" coveredelements="80" complexity="0" loc="53" ncloc="53" packages="7" files="12" classes="12"/>
     <package name="api">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="getJobs.js" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/api/getJobs.js">
@@ -37,6 +37,15 @@
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="11" count="2" type="stmt"/>
         <line num="27" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="composables">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="useConfirmRoute.js" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/composables/useConfirmRoute.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
       </file>
     </package>
     <package name="store">
