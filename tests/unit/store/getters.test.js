@@ -1,88 +1,55 @@
 import getters from "@/store/getters";
 
 describe("Getters", () => {
-  describe("UNIQUE_ORGANIZATIONS", () => {
-    it("Should have a set of organizations", () => {
-      const state = {
-        jobs: [
-          { organization: "Google" },
-          { organization: "Amazon" },
-          { organization: "Google" },
-        ],
-      };
-      const result = getters.UNIQUE_ORGANIZATIONS(state);
-      expect(result).toEqual(new Set(["Google", "Amazon"]));
-    });
-  });
+  describe("UNIQUE_ORGANIZATIONS", () => {});
 
-  describe("Filter jobs by organization", () => {
-    it("Identifies jobs with given organizations", () => {
-      const state = {
-        jobs: [
-          { organization: "Google" },
-          { organization: "Amazon" },
-          { organization: "Microsoft" },
-        ],
-        selectedOrganizations: ["Google", "Microsoft"],
-      };
+  describe("FILTER_JOBS_BY_ORGANIZATIONS", () => {});
 
-      const fitleredJobs = getters.FILTER_JOBS_BY_ORGANIZATIONS(state);
-      expect(fitleredJobs).toEqual([
-        { organization: "Google" },
-        { organization: "Microsoft" },
-      ]);
-    });
+  describe("UNIQUE_JOB_TYPES", () => {});
 
-    describe("Should display all jobs without any selected organizations", () => {
-      it("Should return all jobs", () => {
+  describe("FILTER_JOBS_BY_JOB_TYPES", () => {});
+
+  describe("INCLUDE_JOB_BY_ORGANIZATION", () => {
+    describe("When the user has not selected any organizations", () => {
+      it("Should include job", () => {
         const state = {
-          jobs: [
-            { organization: "Google" },
-            { organization: "Amazon" },
-            { organization: "Microsoft" },
-          ],
           selectedOrganizations: [],
         };
+        const job = { organization: "Google" };
+        const includeJob = getters.INCLUDE_JOB_BY_ORGANIZATION(state)(job);
+        expect(includeJob).toBe(true);
+      });
 
-        const fitleredJobs = getters.FILTER_JOBS_BY_ORGANIZATIONS(state);
-        expect(fitleredJobs).toEqual([
-          { organization: "Google" },
-          { organization: "Amazon" },
-          { organization: "Microsoft" },
-        ]);
+      it("Should identify if job is associated with given organizations", () => {
+        const state = {
+          selectedOrganizations: ["Google", "Microsoft"],
+        };
+        const job = { organization: "Google" };
+        const includeJob = getters.INCLUDE_JOB_BY_ORGANIZATION(state)(job);
+        expect(includeJob).toBe(true);
       });
     });
-  });
 
-  describe("UNIQUE_JOB_TYPES", () => {
-    it("Should have a set of job types", () => {
-      const state = {
-        jobs: [
-          { jobType: "Full-time" },
-          { jobType: "Part-time" },
-          { jobType: "Full-time" },
-        ],
-      };
-      const result = getters.UNIQUE_JOB_TYPES(state);
-      expect(result).toEqual(new Set(["Full-time", "Part-time"]));
-    });
+    describe("INCLUDE_JOB_BY_JOB_TYPE", () => {
+      describe("When the user has not selected any job types", () => {
+        it("Includes job", () => {
+          const state = {
+            selectedJobTypes: [],
+          };
+          const job = { jobType: "Full-time" };
+          const includeJob = getters.INCLUDE_JOB_BY_JOB_TYPE(state)(job);
+          expect(includeJob).toBe(true);
+        });
 
-    it("Identifies jobs with given job types", () => {
-      const state = {
-        jobs: [
-          { jobType: "Full-time" },
-          { jobType: "Part-time" },
-          { jobType: "Full-time" },
-        ],
-        selectedJobTypes: ["Full-time", "Part-time"],
-      };
-
-      const fitleredJobs = getters.FILTER_JOBS_BY_JOB_TYPES(state);
-      expect(fitleredJobs).toEqual([
-        { jobType: "Full-time" },
-        { jobType: "Part-time" },
-        { jobType: "Full-time" },
-      ]);
+        it("Identifies if job is associated with given job types", () => {
+          const state = {
+            selectedJobTypes: ["Full-time", "Part-time"],
+          };
+          const job = { jobType: "Part-time" };
+          const includeJob = getters.INCLUDE_JOB_BY_JOB_TYPE(state)(job);
+          expect(includeJob).toBe(true);
+        });
+      });
     });
   });
 });
