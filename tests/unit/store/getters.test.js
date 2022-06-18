@@ -1,16 +1,18 @@
 import getters from "@/store/getters";
 
 describe("Getters", () => {
-  it("Should have a set of organizations", () => {
-    const state = {
-      jobs: [
-        { organization: "Google" },
-        { organization: "Amazon" },
-        { organization: "Google" },
-      ],
-    };
-    const result = getters.UNIQUE_ORGANIZATIONS(state);
-    expect(result).toEqual(new Set(["Google", "Amazon"]));
+  describe("UNIQUE_ORGANIZATIONS", () => {
+    it("Should have a set of organizations", () => {
+      const state = {
+        jobs: [
+          { organization: "Google" },
+          { organization: "Amazon" },
+          { organization: "Google" },
+        ],
+      };
+      const result = getters.UNIQUE_ORGANIZATIONS(state);
+      expect(result).toEqual(new Set(["Google", "Amazon"]));
+    });
   });
 
   describe("Filter jobs by organization", () => {
@@ -49,6 +51,20 @@ describe("Getters", () => {
           { organization: "Microsoft" },
         ]);
       });
+    });
+  });
+
+  describe("UNIQUE_JOB_TYPES", () => {
+    it("Should have a set of job types", () => {
+      const state = {
+        jobs: [
+          { jobType: "Full-time" },
+          { jobType: "Part-time" },
+          { jobType: "Full-time" },
+        ],
+      };
+      const result = getters.UNIQUE_JOB_TYPES(state);
+      expect(result).toEqual(new Set(["Full-time", "Part-time"]));
     });
   });
 });
