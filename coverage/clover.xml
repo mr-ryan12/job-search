@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1655589878847" clover="3.2.0">
-  <project timestamp="1655589878847" name="All files">
+<coverage generated="1655590829671" clover="3.2.0">
+  <project timestamp="1655590829671" name="All files">
     <metrics statements="50" coveredstatements="50" conditionals="4" coveredconditionals="4" methods="21" coveredmethods="21" elements="75" coveredelements="75" complexity="0" loc="50" ncloc="50" packages="6" files="11" classes="11"/>
     <package name="api">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -49,16 +49,16 @@
       </file>
       <file name="constants.js" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/store/constants.js">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="2" count="8" type="stmt"/>
-        <line num="5" count="8" type="stmt"/>
-        <line num="6" count="8" type="stmt"/>
-        <line num="7" count="8" type="stmt"/>
-        <line num="10" count="8" type="stmt"/>
-        <line num="11" count="8" type="stmt"/>
-        <line num="12" count="8" type="stmt"/>
-        <line num="15" count="8" type="stmt"/>
-        <line num="16" count="8" type="stmt"/>
-        <line num="17" count="8" type="stmt"/>
+        <line num="2" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="6" count="7" type="stmt"/>
+        <line num="7" count="7" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="15" count="7" type="stmt"/>
+        <line num="16" count="7" type="stmt"/>
+        <line num="17" count="7" type="stmt"/>
       </file>
       <file name="getters.js" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/store/getters.js">
         <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="11" coveredmethods="11"/>
