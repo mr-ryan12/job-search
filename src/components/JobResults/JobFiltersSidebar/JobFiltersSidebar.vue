@@ -13,6 +13,7 @@
       </Accordion>
 
       <JobFiltersSidebarOrganizations />
+      <JobFiltersSidebarJobTypes />
     </section>
   </div>
 </template>
@@ -20,13 +21,16 @@
 <script>
 import ActionButton from "@/components/Shared/ActionButton.vue";
 import Accordion from "@/components/Shared/Accordion.vue";
+import JobFiltersSidebarJobTypes from "@/components/JobResults/JobFiltersSidebar/JobFiltersSidebarJobTypes.vue";
 import JobFiltersSidebarOrganizations from "@/components/JobResults/JobFiltersSidebar/JobFiltersSidebarOrganizations.vue";
+
 export default {
   name: "JobFiltersSidebar",
   components: {
     ActionButton,
     Accordion,
     JobFiltersSidebarOrganizations,
+    JobFiltersSidebarJobTypes,
   },
 };
 </script>

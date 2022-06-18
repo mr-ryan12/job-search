@@ -36,7 +36,7 @@
 import { mapActions, mapGetters } from "vuex";
 
 import JobListing from "@/components/JobResults/JobListing.vue";
-import { FETCH_JOBS, FILTER_JOBS_BY_ORGANIZATIONS } from "@/store/constants";
+import { FETCH_JOBS, FILTER_JOBS_BY_JOB_TYPES } from "@/store/constants";
 
 export default {
   name: "JobListings",
@@ -44,7 +44,7 @@ export default {
     JobListing,
   },
   computed: {
-    ...mapGetters([FILTER_JOBS_BY_ORGANIZATIONS]),
+    ...mapGetters([FILTER_JOBS_BY_JOB_TYPES]),
     currentPage() {
       const pageString = this.$route.query.page || 1;
       return Number.parseInt(pageString);
@@ -56,7 +56,7 @@ export default {
     },
     nextPage() {
       const nextPage = this.currentPage + 1;
-      const maxPage = Math.ceil(this.FILTER_JOBS_BY_ORGANIZATIONS.length / 10);
+      const maxPage = Math.ceil(this.FILTER_JOBS_BY_JOB_TYPES.length / 10);
 
       return nextPage <= maxPage ? nextPage : undefined;
     },
@@ -64,7 +64,7 @@ export default {
       const pageNumber = this.currentPage;
       const firstIndex = (pageNumber - 1) * 10;
       const lastIndex = pageNumber * 10;
-      return this.FILTER_JOBS_BY_ORGANIZATIONS.slice(firstIndex, lastIndex);
+      return this.FILTER_JOBS_BY_JOB_TYPES.slice(firstIndex, lastIndex);
     },
   },
   async mounted() {
