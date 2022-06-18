@@ -5,7 +5,7 @@ import Subnav from "@/components/navigation/Subnav.vue";
 describe("Subnav", () => {
   const $store = {
     getters: {
-      FILTER_JOBS_BY_ORGANIZATIONS: Array(15).fill({}),
+      FILTER_JOBS_BY_ORGANIZATIONS: Array(100).fill({}),
     },
   };
   const createConfig = (routeName) => ({
@@ -27,6 +27,11 @@ describe("Subnav", () => {
       const wrapper = mount(Subnav, createConfig("JobResults"));
       const jobCount = wrapper.find("[data-test='job-count']");
       expect(jobCount.exists()).toBe(true);
+    });
+
+    it("Should display the correct number of jobs", () => {
+      const wrapper = mount(Subnav, createConfig("JobResults"));
+      expect(wrapper.text()).toMatch("100 job matches");
     });
   });
 
