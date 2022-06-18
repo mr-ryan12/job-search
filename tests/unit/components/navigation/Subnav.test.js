@@ -3,12 +3,18 @@ import { mount } from "@vue/test-utils";
 import Subnav from "@/components/navigation/Subnav.vue";
 
 describe("Subnav", () => {
+  const $store = {
+    getters: {
+      FILTER_JOBS_BY_ORGANIZATIONS: Array(15).fill({}),
+    },
+  };
   const createConfig = (routeName) => ({
     global: {
       mocks: {
         $route: {
           name: routeName,
         },
+        $store,
       },
       stubs: {
         FontAwesomeIcon: true,
