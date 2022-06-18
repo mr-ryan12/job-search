@@ -4,7 +4,7 @@
       <div v-if="onJobResultsPage" data-test="job-count">
         <font-awesome-icon :icon="['fas', 'search']" class="icon" />
         <span
-          ><span class="num-of-results">{{ filteredJobsLength }}</span> job
+          ><span class="num-of-results">{{ FILTERED_JOBS.length }}</span> job
           matches</span
         >
       </div>
@@ -22,11 +22,11 @@ export default {
   name: "Subnav",
   setup() {
     const store = useStore();
-    const filteredJobsLength = computed(() => store.getters.FILTER_JOBS.length);
+    const FILTERED_JOBS = computed(() => store.getters.FILTER_JOBS);
 
     const onJobResultsPage = useConfirmRoute("JobResults");
 
-    return { onJobResultsPage, filteredJobsLength };
+    return { onJobResultsPage, FILTERED_JOBS };
   },
 };
 </script>
