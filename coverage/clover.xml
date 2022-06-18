@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1655595824316" clover="3.2.0">
-  <project timestamp="1655595824316" name="All files">
-    <metrics statements="56" coveredstatements="56" conditionals="4" coveredconditionals="4" methods="25" coveredmethods="25" elements="85" coveredelements="85" complexity="0" loc="56" ncloc="56" packages="7" files="13" classes="13"/>
+<coverage generated="1655596633274" clover="3.2.0">
+  <project timestamp="1655596633274" name="All files">
+    <metrics statements="62" coveredstatements="62" conditionals="4" coveredconditionals="4" methods="29" coveredmethods="29" elements="95" coveredelements="95" complexity="0" loc="62" ncloc="62" packages="7" files="13" classes="13"/>
     <package name="api">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="getJobs.js" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/api/getJobs.js">
@@ -49,7 +49,7 @@
       </file>
     </package>
     <package name="store">
-      <metrics statements="39" coveredstatements="39" conditionals="4" coveredconditionals="4" methods="19" coveredmethods="19"/>
+      <metrics statements="45" coveredstatements="45" conditionals="4" coveredconditionals="4" methods="23" coveredmethods="23"/>
       <file name="actions.js" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/store/actions.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="1" type="stmt"/>
@@ -57,10 +57,16 @@
         <line num="7" count="2" type="stmt"/>
       </file>
       <file name="composables.js" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/store/composables.js">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
       </file>
       <file name="constants.js" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/store/constants.js">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
