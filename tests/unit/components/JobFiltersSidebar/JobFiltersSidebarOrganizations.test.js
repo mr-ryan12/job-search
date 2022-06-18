@@ -13,7 +13,7 @@ describe("JobFiltersSidebarOrganizations", () => {
       },
     },
   });
-  
+
   it("Should render organizations", async () => {
     const $store = {
       getters: {
