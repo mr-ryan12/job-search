@@ -57,6 +57,25 @@ describe("Getters", () => {
     const result = getters.UNIQUE_ORGANIZATIONS(state);
     expect(result).toEqual(new Set(["Google", "Amazon"]));
   });
+
+  describe("Filter jobs by organization", () => {
+    it("Identifies jobs with given organizations", () => {
+      const state = {
+        jobs: [
+          { organization: "Google" },
+          { organization: "Amazon" },
+          { organization: "Microsoft" },
+        ],
+        selectedOrganizations: ["Google", "Microsoft"],
+      };
+
+      const fitleredJobs = getters.FILTER_JOBS_BY_ORGANIZATIONS(state);
+      expect(fitleredJobs).toEqual([
+        { organization: "Google" },
+        { organization: "Microsoft" },
+      ]);
+    });
+  });
 });
 
 describe("Actions", () => {
