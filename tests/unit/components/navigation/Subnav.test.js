@@ -3,11 +3,6 @@ import { mount } from "@vue/test-utils";
 import Subnav from "@/components/navigation/Subnav.vue";
 
 describe("Subnav", () => {
-  // const $store = {
-  //   getters: {
-  //     FILTER_JOBS_BY_ORGANIZATIONS: Array(100).fill({}),
-  //   },
-  // };
   const createConfig = (routeName, $store = {}) => ({
     global: {
       mocks: {
@@ -26,7 +21,7 @@ describe("Subnav", () => {
     it("Should display job count", () => {
       const $store = {
         getters: {
-          FILTER_JOBS_BY_ORGANIZATIONS: [{ id: 1 }, { id: 2 }],
+          FILTER_JOBS: [{ id: 1 }, { id: 2 }],
         },
       };
       const wrapper = mount(Subnav, createConfig("JobResults", $store));
@@ -37,7 +32,7 @@ describe("Subnav", () => {
     it("Should display the correct number of jobs", () => {
       const $store = {
         getters: {
-          FILTER_JOBS_BY_ORGANIZATIONS: [{ id: 1 }, { id: 2 }],
+          FILTER_JOBS: [{ id: 1 }, { id: 2 }],
         },
       };
       const wrapper = mount(Subnav, createConfig("JobResults", $store));
