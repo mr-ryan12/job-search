@@ -13,6 +13,7 @@
               v-model="selectedOrganizations"
               :value="organization"
               type="checkbox"
+              :data-test="organization"
               @change="selectOrganization"
             />
             <label :for="organization" class="label" data-test="organization">{{
