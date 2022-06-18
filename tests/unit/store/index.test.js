@@ -35,6 +35,14 @@ describe("mutations", () => {
       expect(state.jobs).toEqual(["Job 1", "Job 2"]);
     });
   });
+
+  describe("ADD_SELECTED_ORGANIZATIONS", () => {
+    it("Updates organizations by user's filter choice", () => {
+      const state = { selectedOrganizations: [] };
+      mutations.ADD_SELECTED_ORGANIZATIONS(state, ["Org 1", "Org 2"]);
+      expect(state.selectedOrganizations).toEqual(["Org 1", "Org 2"]);
+    });
+  });
 });
 
 describe("Getters", () => {

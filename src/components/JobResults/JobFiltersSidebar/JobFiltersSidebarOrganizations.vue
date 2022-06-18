@@ -46,9 +46,7 @@ export default {
     // },
   },
   methods: {
-    selectOrganization() {
-      
-    },
+    selectOrganization() {},
   },
 };
 </script>
