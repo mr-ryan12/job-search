@@ -12,7 +12,7 @@ const getters = {
     return uniqueOrganizations;
   },
   [FILTER_JOBS_BY_ORGANIZATIONS](state) {
-    if (state.selectedOrganizations.length == 0) {
+    if (state.selectedOrganizations.length === 0) {
       return state.jobs;
     }
     return state.jobs.filter((job) =>
@@ -25,7 +25,7 @@ const getters = {
     return uniqueJobTypes;
   },
   [FILTER_JOBS_BY_JOB_TYPES](state) {
-    if (state.selectedJobTypes.length == 0) {
+    if (state.selectedJobTypes.length === 0) {
       return state.jobs;
     }
     return state.jobs.filter((job) =>

@@ -66,5 +66,23 @@ describe("Getters", () => {
       const result = getters.UNIQUE_JOB_TYPES(state);
       expect(result).toEqual(new Set(["Full-time", "Part-time"]));
     });
+
+    it("Identifies jobs with given job types", () => {
+      const state = {
+        jobs: [
+          { jobType: "Full-time" },
+          { jobType: "Part-time" },
+          { jobType: "Full-time" },
+        ],
+        selectedJobTypes: ["Full-time", "Part-time"],
+      };
+
+      const fitleredJobs = getters.FILTER_JOBS_BY_JOB_TYPES(state);
+      expect(fitleredJobs).toEqual([
+        { jobType: "Full-time" },
+        { jobType: "Part-time" },
+        { jobType: "Full-time" },
+      ]);
+    });
   });
 });
