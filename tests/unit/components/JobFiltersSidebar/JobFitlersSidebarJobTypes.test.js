@@ -68,7 +68,7 @@ describe("JobFiltersSidebarJobTypes", () => {
         commit: jest.fn(),
       };
       const push = jest.fn();
-      const $router = {push}
+      const $router = { push };
       const wrapper = mount(
         JobFiltersSidebarJobTypes,
         createConfig($store, $router)
@@ -78,6 +78,6 @@ describe("JobFiltersSidebarJobTypes", () => {
       const fullTimeInput = wrapper.find("[data-test='Full-time']");
       await fullTimeInput.setChecked();
       expect(push).toHaveBeenCalledWith({ name: "JobResults" });
-    })
+    });
   });
 });
