@@ -1,10 +1,6 @@
 <template>
   <div class="accordion-container">
-    <div
-      class="header-container"
-      data-test="clickable-area"
-      @click="toggleContainer"
-    >
+    <div class="header-container" data-test="clickable-area" @click="open">
       <h3 class="font-semibold">{{ header }}</h3>
       <font-awesome-icon :icon="carotIcon" />
     </div>
@@ -18,6 +14,8 @@
 </template>
 
 <script>
+import { ref, computed } from "vue";
+
 export default {
   name: "Accordion",
   props: {
@@ -26,20 +24,16 @@ export default {
       required: true,
     },
   },
-  data() {
-    return {
-      isOpen: false,
+  setup() {
+    const isOpen = ref(false);
+    const carotIcon = computed(() => {
+      return isOpen.value ? ["fas", "angle-up"] : ["fas", "angle-down"];
+    });
+
+    const open = () => {
+      isOpen.value = !isOpen.value;
     };
-  },
-  computed: {
-    carotIcon() {
-      return this.isOpen ? ["fas", "angle-up"] : ["fas", "angle-down"];
-    },
-  },
-  methods: {
-    toggleContainer() {
-      this.isOpen = !this.isOpen;
-    },
+    return { open, isOpen, carotIcon };
   },
 };
 </script>
