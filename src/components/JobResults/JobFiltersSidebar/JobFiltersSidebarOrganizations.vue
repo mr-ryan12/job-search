@@ -26,9 +26,9 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapMutations } from "vuex";
 import Accordion from "@/components/Shared/Accordion.vue";
-import { UNIQUE_ORGANIZATIONS } from "@/store";
+import { ADD_SELECTED_ORGANIZATIONS, UNIQUE_ORGANIZATIONS } from "@/store";
 export default {
   name: "JobFiltersSidebarOrganizations",
   components: {
@@ -41,12 +41,12 @@ export default {
   },
   computed: {
     ...mapGetters([UNIQUE_ORGANIZATIONS]),
-    // setOrganizations() {
-    //   return this.$store.getters.UNIQUE_ORGANIZATIONS;
-    // },
   },
   methods: {
-    selectOrganization() {},
+    ...mapMutations([ADD_SELECTED_ORGANIZATIONS]),
+    selectOrganization() {
+      this.ADD_SELECTED_ORGANIZATIONS(this.selectedOrganizations);
+    },
   },
 };
 </script>
