@@ -9,20 +9,29 @@
   </section>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import nextElementInList from "@/utils/nextElementInList.js";
 
-export default {
+interface Data {
+  action: string;
+  interval?: number;
+}
+
+interface ActionClasses {
+  [x: string]: boolean;
+}
+
+export default defineComponent({
   name: "HeadLine",
-  data() {
+  data(): Data {
     return {
-      sample: "Hello! Thank you for stopping by!",
       action: "Build",
-      interval: null,
+      interval: undefined,
     };
   },
   computed: {
-    actionClass() {
+    actionClass(): ActionClasses {
       return { [this.action.toLowerCase()]: true };
     },
   },
@@ -40,7 +49,7 @@ export default {
       }, 3000);
     },
   },
-};
+});
 </script>
 
 <style lang="scss" scoped>
