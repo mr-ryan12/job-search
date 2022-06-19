@@ -33,47 +33,49 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from "vuex";
+import { onMounted, computed } from "vue";
+import { useStore } from "vuex";
+import { useRoute } from "vue-router";
 
+import { useFilteredJobs } from "@/store/composables";
+import { FETCH_JOBS } from "@/store/constants";
 import JobListing from "@/components/JobResults/JobListing.vue";
-import { FETCH_JOBS, FILTER_JOBS } from "@/store/constants";
 
 export default {
   name: "JobListings",
   components: {
     JobListing,
   },
-  computed: {
-    ...mapGetters([FILTER_JOBS]),
-    currentPage() {
-      const pageString = this.$route.query.page || 1;
-      return Number.parseInt(pageString);
-    },
-    previousPage() {
-      const previousPage = this.currentPage - 1;
+  setup() {
+    const store = useStore();
+    const fetchJobs = () => store.dispatch(FETCH_JOBS);
+    onMounted(fetchJobs);
+
+    const filteredJobs = useFilteredJobs();
+
+    const route = useRoute();
+    const currentPage = computed(() => Number.parseInt(route.query.page || 1));
+
+    const previousPage = computed(() => {
+      const previousPage = currentPage.value - 1;
       const firstPage = 1;
-
       return previousPage >= firstPage ? previousPage : undefined;
-    },
-    nextPage() {
-      const nextPage = this.currentPage + 1;
-      const maxPage = Math.ceil(this.FILTER_JOBS.length / 10);
+    });
 
+    const nextPage = computed(() => {
+      const nextPage = currentPage.value + 1;
+      const maxPage = Math.ceil(filteredJobs.value.length / 10);
       return nextPage <= maxPage ? nextPage : undefined;
-    },
-    displayedJobs() {
-      const pageNumber = this.currentPage;
+    });
+
+    const displayedJobs = computed(() => {
+      const pageNumber = currentPage.value;
       const firstIndex = (pageNumber - 1) * 10;
       const lastIndex = pageNumber * 10;
+      return filteredJobs.value.slice(firstIndex, lastIndex);
+    });
 
-      return this.FILTER_JOBS.slice(firstIndex, lastIndex);
-    },
-  },
-  async mounted() {
-    this.FETCH_JOBS();
-  },
-  methods: {
-    ...mapActions([FETCH_JOBS]),
+    return { previousPage, nextPage, currentPage, displayedJobs };
   },
 };
 </script>
