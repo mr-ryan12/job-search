@@ -4,10 +4,11 @@
   </button>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import { toRefs, computed } from "vue";
 
-export default {
+export default defineComponent({
   props: {
     text: {
       type: String,
@@ -18,7 +19,7 @@ export default {
       type: String,
       default: "primary",
       required: false,
-      validator(value) {
+      validator: (value: string) => {
         // must return a Boolean
         return ["primary", "secondary"].includes(value);
       },
@@ -34,7 +35,7 @@ export default {
 
     return { buttonClass };
   },
-};
+});
 </script>
 
 <style lang="scss" scoped>
