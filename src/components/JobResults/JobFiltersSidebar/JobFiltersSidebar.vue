@@ -34,6 +34,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+
 import ActionButton from "@/components/Shared/ActionButton.vue";
 import JobFiltersSidebarCheckboxGroup from "@/components/JobResults/JobFiltersSidebar/JobFiltersSidebarCheckboxGroup.vue";
 
@@ -42,6 +43,7 @@ import {
   useUniqueOrganizations,
   useUniqueDegrees,
 } from "@/store/composables";
+
 import {
   ADD_SELECTED_JOB_TYPES,
   ADD_SELECTED_ORGANIZATIONS,
