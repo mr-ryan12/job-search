@@ -8,20 +8,22 @@ import {
   FETCH_JOBS,
 } from "./constants";
 
+import { Job } from "@/api/types";
+
 // Getters
 export const useFilteredJobs = () => {
   const store = useStore();
-  return computed(() => store.getters[FILTER_JOBS]);
+  return computed<Job[]>(() => store.getters[FILTER_JOBS]);
 };
 
 export const useUniqueJobTypes = () => {
   const store = useStore();
-  return computed(() => store.getters[UNIQUE_JOB_TYPES]);
+  return computed<Set<string>>(() => store.getters[UNIQUE_JOB_TYPES]);
 };
 
 export const useUniqueOrganizations = () => {
   const store = useStore();
-  return computed(() => store.getters[UNIQUE_ORGANIZATIONS]);
+  return computed<Set<string>>(() => store.getters[UNIQUE_ORGANIZATIONS]);
 };
 
 // Actions
