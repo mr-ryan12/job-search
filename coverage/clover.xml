@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1655664443506" clover="3.2.0">
-  <project timestamp="1655664443506" name="All files">
-    <metrics statements="150" coveredstatements="149" conditionals="13" coveredconditionals="13" methods="52" coveredmethods="51" elements="215" coveredelements="213" complexity="0" loc="150" ncloc="150" packages="9" files="21" classes="21"/>
+<coverage generated="1655664679863" clover="3.2.0">
+  <project timestamp="1655664679863" name="All files">
+    <metrics statements="152" coveredstatements="151" conditionals="13" coveredconditionals="13" methods="52" coveredmethods="51" elements="217" coveredelements="215" complexity="0" loc="152" ncloc="152" packages="9" files="21" classes="21"/>
     <package name="src.api">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="getJobs.js" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/api/getJobs.js">
@@ -107,7 +107,7 @@
       </file>
     </package>
     <package name="src.composables">
-      <metrics statements="22" coveredstatements="22" conditionals="6" coveredconditionals="6" methods="7" coveredmethods="7"/>
+      <metrics statements="24" coveredstatements="24" conditionals="6" coveredconditionals="6" methods="7" coveredmethods="7"/>
       <file name="useConfirmRoute.ts" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/composables/useConfirmRoute.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="3" type="stmt"/>
@@ -127,17 +127,19 @@
         <line num="7" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="10" count="2" type="stmt"/>
       </file>
-      <file name="usePreviousAndNextPages.js" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/composables/usePreviousAndNextPages.js">
-        <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="4" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="7" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="10" count="4" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="12" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="15" count="4" type="stmt"/>
+      <file name="usePreviousAndNextPages.ts" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/composables/usePreviousAndNextPages.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.store">
