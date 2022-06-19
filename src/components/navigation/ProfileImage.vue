@@ -2,16 +2,17 @@
   <img :src="profilePicture" alt="Profile Picture" data-test="profile-image" />
 </template>
 
-<script>
+<script lang="ts">
 import profilePicture from "@/assets/profile-picture.png";
+import { defineComponent } from "vue";
 
-export default {
+export default defineComponent({
   computed: {
     profilePicture() {
       return profilePicture;
     },
   },
-};
+});
 </script>
 
 <style>
