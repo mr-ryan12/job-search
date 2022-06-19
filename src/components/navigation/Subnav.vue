@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { useFilteredJobs } from "@/store/composables.js";
+import { useFilteredJobs } from "@/store/composables.ts";
 
 import useConfirmRoute from "@/composables/useConfirmRoute.js";
 
