@@ -5,10 +5,11 @@ import {
   INCLUDE_JOB_BY_ORGANIZATION,
   INCLUDE_JOB_BY_JOB_TYPE,
   UNIQUE_DEGREES,
+  INCLUDE_JOB_BY_DEGREE,
 } from "./constants";
 
 import { GlobalState } from "./types";
-import { Job } from "@/api/types";
+import { Job, Degree } from "@/api/types";
 
 interface IncludeJobGetters {
   INCLUDE_JOB_BY_JOB_TYPE: (job: Job) => boolean;
@@ -36,6 +37,10 @@ const getters = {
   [INCLUDE_JOB_BY_JOB_TYPE]: (state: GlobalState) => (job: Job) => {
     if (state.selectedJobTypes.length === 0) return true;
     return state.selectedJobTypes.includes(job.jobType);
+  },
+  [INCLUDE_JOB_BY_DEGREE]: (state: GlobalState) => (degree: Degree) => {
+    if (state.selectedDegrees.length === 0) return true;
+    return state.selectedDegrees.includes(degree.degree);
   },
   [FILTER_JOBS](state: GlobalState, getters: IncludeJobGetters) {
     return state.jobs

@@ -84,6 +84,32 @@ describe("Getters", () => {
     });
   });
 
+  describe("INCLUDE_JOB_BY_JOB_TYPE", () => {
+    describe("when the user has not selected any job types", () => {
+      it("includes job", () => {
+        const state = createState({
+          selectedJobTypes: [],
+        });
+        const job = createJob({ jobType: "Full-time" });
+        const includeJob = getters.INCLUDE_JOB_BY_JOB_TYPE(state)(job);
+        expect(includeJob).toBe(true);
+      });
+    });
+  });
+
+  describe("INCLUDE_JOB_BY_DEGREE", () => {
+    describe("when the user has not selected any degrees", () => {
+      it("includes job", () => {
+        const state = createState({
+          selectedDegrees: [],
+        });
+        const degree = createJob({ degree: "Master's" });
+        const includeDegree = getters.INCLUDE_JOB_BY_DEGREE(state)(degree);
+        expect(includeDegree).toBe(true);
+      });
+    });
+  });
+
   describe("FILTER_JOBS", () => {
     it("Filters jobs by organization and job type", () => {
       const INCLUDE_JOB_BY_ORGANIZATION = jest.fn().mockReturnValue(true);
