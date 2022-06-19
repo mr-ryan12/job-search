@@ -593,7 +593,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src/utils/nextElementInList.js
+SF:src/utils/nextElementInList.ts
 FN:1,(anonymous_0)
 FNF:1
 FNH:1
@@ -601,9 +601,11 @@ FNDA:5,(anonymous_0)
 DA:1,2
 DA:2,5
 DA:3,5
-DA:5,5
-LF:4
-LH:4
+DA:4,5
+DA:6,5
+DA:9,2
+LF:6
+LH:6
 BRF:0
 BRH:0
 end_of_record

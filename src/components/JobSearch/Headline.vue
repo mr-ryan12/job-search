@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import nextElementInList from "@/utils/nextElementInList.js";
+import nextElementInList from "@/utils/nextElementInList";
 
 interface Data {
   action: string;

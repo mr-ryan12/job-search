@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1655670161189" clover="3.2.0">
-  <project timestamp="1655670161189" name="All files">
-    <metrics statements="233" coveredstatements="232" conditionals="13" coveredconditionals="13" methods="65" coveredmethods="63" elements="311" coveredelements="308" complexity="0" loc="233" ncloc="233" packages="11" files="28" classes="28"/>
+<coverage generated="1655670568761" clover="3.2.0">
+  <project timestamp="1655670568761" name="All files">
+    <metrics statements="235" coveredstatements="234" conditionals="13" coveredconditionals="13" methods="65" coveredmethods="63" elements="313" coveredelements="310" complexity="0" loc="235" ncloc="235" packages="11" files="28" classes="28"/>
     <package name="src.api">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="getJobs.ts" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/api/getJobs.ts">
@@ -332,13 +332,15 @@
       </file>
     </package>
     <package name="src.utils">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="nextElementInList.js" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/utils/nextElementInList.js">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="nextElementInList.ts" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/utils/nextElementInList.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="5" type="stmt"/>
         <line num="3" count="5" type="stmt"/>
-        <line num="5" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
       </file>
     </package>
     <package name="tests.unit.store">
