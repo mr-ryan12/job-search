@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1655660065347" clover="3.2.0">
-  <project timestamp="1655660065348" name="All files">
-    <metrics statements="92" coveredstatements="92" conditionals="9" coveredconditionals="9" methods="36" coveredmethods="36" elements="137" coveredelements="137" complexity="0" loc="92" ncloc="92" packages="7" files="15" classes="15"/>
+<coverage generated="1655661761399" clover="3.2.0">
+  <project timestamp="1655661761399" name="All files">
+    <metrics statements="96" coveredstatements="96" conditionals="9" coveredconditionals="9" methods="37" coveredmethods="37" elements="142" coveredelements="142" complexity="0" loc="96" ncloc="96" packages="8" files="16" classes="16"/>
     <package name="src.api">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="getJobs.js" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/api/getJobs.js">
@@ -29,6 +29,16 @@
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="11" count="2" type="stmt"/>
         <line num="27" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.navigation">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="ProfileImage.vue" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/components/navigation/ProfileImage.vue">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.composables">
