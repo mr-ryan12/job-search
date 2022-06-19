@@ -1,7 +1,11 @@
 import { ref } from "vue";
 import { flushPromises, shallowMount, RouterLinkStub } from "@vue/test-utils";
 
-import { useFilteredJobs, useFetchJobsDispatch } from "@/store/composables";
+import {
+  useFilteredJobs,
+  useFetchJobsDispatch,
+  useFetchDegreesDispatch,
+} from "@/store/composables";
 jest.mock("@/store/composables");
 
 import useCurrentPage from "@/composables/useCurrentPage";
@@ -35,6 +39,17 @@ describe("JobListings", () => {
       });
       shallowMount(JobListings, createConfig());
       expect(useFetchJobsDispatch).toHaveBeenCalled();
+    });
+
+    it("Should fetch degrees from API", () => {
+      useFilteredJobsMock.mockReturnValue({ value: [] });
+      useCurrentPageMock.mockReturnValue({ value: 2 });
+      usePreviousAndNextPagesMock.mockReturnValue({
+        previousPage: 1,
+        nextPage: 3,
+      });
+      shallowMount(JobListings, createConfig());
+      expect(useFetchDegreesDispatch).toHaveBeenCalled();
     });
   });
 

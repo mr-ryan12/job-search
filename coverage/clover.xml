@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1655675683751" clover="3.2.0">
-  <project timestamp="1655675683751" name="All files">
-    <metrics statements="255" coveredstatements="254" conditionals="15" coveredconditionals="15" methods="73" coveredmethods="71" elements="343" coveredelements="340" complexity="0" loc="255" ncloc="255" packages="11" files="29" classes="29"/>
+<coverage generated="1655677926250" clover="3.2.0">
+  <project timestamp="1655677926251" name="All files">
+    <metrics statements="265" coveredstatements="264" conditionals="15" coveredconditionals="15" methods="78" coveredmethods="76" elements="358" coveredelements="355" complexity="0" loc="265" ncloc="265" packages="11" files="29" classes="29"/>
     <package name="src.api">
       <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="getDegrees.ts" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/api/getDegrees.ts">
@@ -31,7 +31,7 @@
       </file>
     </package>
     <package name="src.components.JobResults">
-      <metrics statements="22" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="4"/>
+      <metrics statements="23" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="4"/>
       <file name="JobListing.vue" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/components/JobResults/JobListing.vue">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="45" count="2" type="stmt"/>
@@ -40,41 +40,42 @@
         <line num="58" count="5" type="stmt"/>
       </file>
       <file name="JobListings.vue" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/components/JobResults/JobListings.vue">
-        <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+        <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
         <line num="36" count="1" type="stmt"/>
         <line num="37" count="1" type="stmt"/>
         <line num="39" count="1" type="stmt"/>
         <line num="40" count="1" type="stmt"/>
         <line num="41" count="1" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
-        <line num="44" count="1" type="stmt"/>
-        <line num="50" count="7" type="stmt"/>
-        <line num="52" count="7" type="stmt"/>
-        <line num="54" count="7" type="stmt"/>
-        <line num="56" count="7" type="stmt"/>
-        <line num="58" count="7" type="stmt"/>
-        <line num="63" count="7" type="stmt"/>
-        <line num="64" count="7" type="stmt"/>
-        <line num="65" count="7" type="stmt"/>
-        <line num="66" count="7" type="stmt"/>
-        <line num="67" count="7" type="stmt"/>
-        <line num="70" count="7" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="54" count="8" type="stmt"/>
+        <line num="55" count="8" type="stmt"/>
+        <line num="57" count="8" type="stmt"/>
+        <line num="59" count="8" type="stmt"/>
+        <line num="61" count="8" type="stmt"/>
+        <line num="63" count="8" type="stmt"/>
+        <line num="68" count="8" type="stmt"/>
+        <line num="69" count="8" type="stmt"/>
+        <line num="70" count="8" type="stmt"/>
+        <line num="71" count="8" type="stmt"/>
+        <line num="72" count="8" type="stmt"/>
+        <line num="75" count="8" type="stmt"/>
       </file>
     </package>
     <package name="src.components.JobResults.JobFiltersSidebar">
       <metrics statements="24" coveredstatements="24" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="JobFiltersSidebar.vue" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/components/JobResults/JobFiltersSidebar/JobFiltersSidebar.vue">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="31" count="1" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
         <line num="36" count="1" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
-        <line num="50" count="2" type="stmt"/>
-        <line num="51" count="2" type="stmt"/>
-        <line num="53" count="2" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="60" count="3" type="stmt"/>
+        <line num="61" count="3" type="stmt"/>
+        <line num="62" count="3" type="stmt"/>
+        <line num="64" count="3" type="stmt"/>
       </file>
       <file name="JobFiltersSidebarCheckboxGroup.vue" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/components/JobResults/JobFiltersSidebar/JobFiltersSidebarCheckboxGroup.vue">
         <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
@@ -161,7 +162,7 @@
         <line num="8" count="4" type="stmt"/>
         <line num="9" count="4" type="stmt"/>
         <line num="11" count="4" type="stmt"/>
-        <line num="24" count="9" type="stmt"/>
+        <line num="24" count="10" type="stmt"/>
         <line num="29" count="3" type="stmt"/>
         <line num="30" count="3" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
@@ -249,7 +250,7 @@
       </file>
     </package>
     <package name="src.store">
-      <metrics statements="81" coveredstatements="81" conditionals="3" coveredconditionals="3" methods="30" coveredmethods="30"/>
+      <metrics statements="90" coveredstatements="90" conditionals="3" coveredconditionals="3" methods="35" coveredmethods="35"/>
       <file name="actions.ts" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/store/actions.ts">
         <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="8" type="stmt"/>
@@ -263,26 +264,32 @@
         <line num="28" count="8" type="stmt"/>
       </file>
       <file name="composables.ts" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/store/composables.ts">
-        <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+        <metrics statements="22" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="10"/>
         <line num="1" count="5" type="stmt"/>
         <line num="2" count="5" type="stmt"/>
         <line num="3" count="5" type="stmt"/>
         <line num="5" count="5" type="stmt"/>
-        <line num="15" count="5" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="20" count="5" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="25" count="5" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="31" count="5" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="32" count="5" type="stmt"/>
         <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="38" count="5" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="43" count="5" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
       </file>
       <file name="constants.ts" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/store/constants.ts">
-        <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="10" type="stmt"/>
         <line num="2" count="10" type="stmt"/>
         <line num="5" count="10" type="stmt"/>
@@ -298,31 +305,33 @@
         <line num="21" count="10" type="stmt"/>
         <line num="22" count="10" type="stmt"/>
         <line num="23" count="10" type="stmt"/>
+        <line num="24" count="10" type="stmt"/>
       </file>
       <file name="getters.ts" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/store/getters.ts">
-        <metrics statements="22" coveredstatements="22" conditionals="3" coveredconditionals="3" methods="15" coveredmethods="15"/>
+        <metrics statements="23" coveredstatements="23" conditionals="3" coveredconditionals="3" methods="16" coveredmethods="16"/>
         <line num="1" count="8" type="stmt"/>
-        <line num="19" count="8" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="22" count="3" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="27" count="3" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="31" count="2" type="stmt"/>
-        <line num="33" count="2" type="stmt"/>
-        <line num="34" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="35" count="1" type="stmt"/>
-        <line num="37" count="3" type="stmt"/>
-        <line num="38" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="39" count="1" type="stmt"/>
-        <line num="41" count="2" type="stmt"/>
-        <line num="42" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="43" count="1" type="stmt"/>
-        <line num="46" count="1" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="35" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
+        <line num="39" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="43" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="44" count="1" type="stmt"/>
         <line num="47" count="1" type="stmt"/>
         <line num="48" count="1" type="stmt"/>
-        <line num="52" count="8" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="54" count="8" type="stmt"/>
       </file>
       <file name="index.ts" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/store/index.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -336,20 +345,21 @@
         <line num="20" count="7" type="stmt"/>
       </file>
       <file name="mutations.ts" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/store/mutations.ts">
-        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
         <line num="1" count="8" type="stmt"/>
-        <line num="12" count="8" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="30" count="8" type="stmt"/>
+        <line num="13" count="8" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="34" count="8" type="stmt"/>
       </file>
       <file name="state.ts" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/store/state.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="11" type="stmt"/>
-        <line num="4" count="27" type="stmt"/>
+        <line num="4" count="28" type="stmt"/>
         <line num="14" count="11" type="stmt"/>
       </file>
     </package>
@@ -371,8 +381,8 @@
         <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
         <line num="1" count="3" type="stmt"/>
         <line num="5" count="3" type="stmt"/>
-        <line num="6" count="16" type="stmt"/>
-        <line num="7" count="16" type="stmt"/>
+        <line num="6" count="17" type="stmt"/>
+        <line num="7" count="17" type="stmt"/>
         <line num="9" count="21" type="cond" truecount="1" falsecount="0"/>
         <line num="23" count="3" type="cond" truecount="1" falsecount="0"/>
       </file>
