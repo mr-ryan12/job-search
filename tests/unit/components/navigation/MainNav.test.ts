@@ -2,8 +2,14 @@ import { shallowMount, RouterLinkStub } from "@vue/test-utils";
 
 import MainNav from "@/components/navigation/MainNav.vue";
 
+interface Store {
+  state: {
+    isLoggedIn: boolean;
+  };
+}
+
 describe("MainNav", () => {
-  const createConfig = ($store) => ({
+  const createConfig = ($store: Store) => ({
     global: {
       mocks: {
         $store,

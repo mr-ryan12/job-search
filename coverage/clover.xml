@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1655661761399" clover="3.2.0">
-  <project timestamp="1655661761399" name="All files">
-    <metrics statements="96" coveredstatements="96" conditionals="9" coveredconditionals="9" methods="37" coveredmethods="37" elements="142" coveredelements="142" complexity="0" loc="96" ncloc="96" packages="8" files="16" classes="16"/>
+<coverage generated="1655662065198" clover="3.2.0">
+  <project timestamp="1655662065198" name="All files">
+    <metrics statements="105" coveredstatements="105" conditionals="11" coveredconditionals="11" methods="39" coveredmethods="39" elements="155" coveredelements="155" complexity="0" loc="105" ncloc="105" packages="8" files="17" classes="17"/>
     <package name="src.api">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="getJobs.js" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/api/getJobs.js">
@@ -32,7 +32,19 @@
       </file>
     </package>
     <package name="src.components.navigation">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <file name="MainNav.vue" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/components/navigation/MainNav.vue">
+        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="56" count="6" type="stmt"/>
+        <line num="69" count="6" type="cond" truecount="2" falsecount="0"/>
+      </file>
       <file name="ProfileImage.vue" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/components/navigation/ProfileImage.vue">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="6" count="2" type="stmt"/>
