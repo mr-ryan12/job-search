@@ -3,9 +3,11 @@ import actions from "@/store/actions";
 import getJobs from "@/api/getJobs";
 jest.mock("@/api/getJobs");
 
+const getJobsMock = getJobs as jest.Mock;
+
 describe("Actions", () => {
   beforeEach(() => {
-    getJobs.mockResolvedValue([
+    getJobsMock.mockResolvedValue([
       {
         id: 1,
         title: "Vue Developer",
