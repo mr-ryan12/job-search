@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/components/Shared/Accordion.vue</title>
+    <title>Code coverage report for src/components/navigation/Subnav.vue</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/Shared</a> Accordion.vue</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/navigation</a> Subnav.vue</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>9/9</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>9/9</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
@@ -117,17 +117,7 @@
 <a name='L52'></a><a href='#L52'>52</a>
 <a name='L53'></a><a href='#L53'>53</a>
 <a name='L54'></a><a href='#L54'>54</a>
-<a name='L55'></a><a href='#L55'>55</a>
-<a name='L56'></a><a href='#L56'>56</a>
-<a name='L57'></a><a href='#L57'>57</a>
-<a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a>
-<a name='L60'></a><a href='#L60'>60</a>
-<a name='L61'></a><a href='#L61'>61</a>
-<a name='L62'></a><a href='#L62'>62</a>
-<a name='L63'></a><a href='#L63'>63</a>
-<a name='L64'></a><a href='#L64'>64</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L55'></a><a href='#L55'>55</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -147,22 +137,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -190,66 +172,57 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
-  &lt;div class="accordion-container"&gt;
-    &lt;div class="header-container" data-test="clickable-area" @click="open"&gt;
-      &lt;h3 class="font-semibold"&gt;{{ header }}&lt;/h3&gt;
-      &lt;font-awesome-icon :icon="carotIcon" /&gt;
-    &lt;/div&gt;
-&nbsp;
-    &lt;div v-if="isOpen" class="open-contents"&gt;
-      &lt;slot&gt;
-        &lt;p&gt;Whoops, somebody forgot to populate me!&lt;/p&gt;
-      &lt;/slot&gt;
+  &lt;div class="main-container"&gt;
+    &lt;div class="sub-container"&gt;
+      &lt;div v-if="onJobResultsPage" data-test="job-count"&gt;
+        &lt;font-awesome-icon :icon="['fas', 'search']" class="icon" /&gt;
+        &lt;span
+          &gt;&lt;span class="num-of-results"&gt;{{ FILTERED_JOBS.length }}&lt;/span&gt; job
+          matches&lt;/span
+        &gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/template&gt;
 &nbsp;
 &lt;script lang="ts"&gt;
 import { defineComponent } from "vue";
-import { ref, computed } from "vue";
+import { useFilteredJobs } from "@/store/composables";
+&nbsp;
+import useConfirmRoute from "@/composables/useConfirmRoute";
 &nbsp;
 export default defineComponent({
-  name: "Accordion",
-  props: {
-    header: {
-      type: String,
-      required: true,
-    },
-  },
+  name: "Subnav",
   setup() {
-    const isOpen = ref(false);
-    const carotIcon = computed(() =&gt; {
-      return isOpen.value ? ["fas", "angle-up"] : ["fas", "angle-down"];
-    });
-&nbsp;
-    const open = () =&gt; {
-      isOpen.value = !isOpen.value;
-    };
-    return { open, isOpen, carotIcon };
+    const FILTERED_JOBS = useFilteredJobs();
+    const onJobResultsPage = useConfirmRoute("JobResults");
+    return { onJobResultsPage, FILTERED_JOBS };
   },
 });
 &lt;/script&gt;
 &nbsp;
 &lt;style lang="scss" scoped&gt;
-.accordion-container {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  border-bottom: 10px solid #f8f9fa;
-  &amp;:hover {
-    cursor: pointer;
-  }
-}
-&nbsp;
-.header-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-&nbsp;
-.open-contents {
+.main-container {
   width: 100%;
-  margin-top: 1.25rem;
+  height: 4rem;
+  background-color: #fff;
+  border-bottom: 1px solid #dadcd0;
+}
+&nbsp;
+.sub-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+&nbsp;
+.icon {
+  margin-right: 0.75rem;
+}
+&nbsp;
+.num-of-results {
+  color: #137333;
 }
 &lt;/style&gt;
 &nbsp;</pre></td></tr></table></pre>

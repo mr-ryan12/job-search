@@ -16,7 +16,7 @@
 import { defineComponent } from "vue";
 import { useFilteredJobs } from "@/store/composables";
 
-import useConfirmRoute from "@/composables/useConfirmRoute.js";
+import useConfirmRoute from "@/composables/useConfirmRoute";
 
 export default defineComponent({
   name: "Subnav",

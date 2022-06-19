@@ -35,7 +35,7 @@
 <script>
 import { onMounted, computed } from "vue";
 
-import useCurrentPage from "@/composables/useCurrentPage.js";
+import useCurrentPage from "@/composables/useCurrentPage.ts";
 import usePreviousAndNextPages from "@/composables/usePreviousAndNextPages.js";
 import { useFilteredJobs, useFetchJobsDispatch } from "@/store/composables";
 import JobListing from "@/components/JobResults/JobListing.vue";
