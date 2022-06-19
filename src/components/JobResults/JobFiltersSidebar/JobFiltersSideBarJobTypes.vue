@@ -28,7 +28,6 @@
 
 <script>
 import { ref } from "vue";
-// import { mapMutations } from "vuex";
 import { useStore } from "vuex";
 import { useRouter } from "vue-router";
 
