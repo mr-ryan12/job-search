@@ -1,9 +1,11 @@
 import { mount } from "@vue/test-utils";
 import { useStore } from "vuex";
 jest.mock("vuex");
+const useStoreMock = useStore as jest.Mock;
 
 import { useRouter } from "vue-router";
 jest.mock("vue-router");
+const useRouterMock = useRouter as jest.Mock;
 
 import JobFiltersSidebarCheckboxGroup from "@/components/JobResults/JobFiltersSidebar/JobFiltersSidebarCheckboxGroup.vue";
 
@@ -37,8 +39,8 @@ describe("JobFiltersSidebarCheckboxGroup", () => {
   describe("When user selects a checkbox", () => {
     it("Should indicate user has selected checkbox", async () => {
       const commit = jest.fn();
-      useStore.mockReturnValue({ commit });
-      useRouter.mockReturnValue({
+      useStoreMock.mockReturnValue({ commit });
+      useRouterMock.mockReturnValue({
         push: jest.fn(),
       });
       const props = {
@@ -52,14 +54,14 @@ describe("JobFiltersSidebarCheckboxGroup", () => {
       const clickableArea = wrapper.find("[data-test='clickable-area'");
       await clickableArea.trigger("click");
       const fullTimeInput = wrapper.find("[data-test='Full-time']");
-      await fullTimeInput.setChecked();
+      await fullTimeInput.setValue(true);
       expect(commit).toHaveBeenCalledWith("SOME_MUTATION", ["Full-time"]);
     });
 
     it("Should redirect user back to page 1 to see a fresh batch of filtered jobs", async () => {
-      useStore.mockReturnValue({ commit: jest.fn() });
+      useStoreMock.mockReturnValue({ commit: jest.fn() });
       const push = jest.fn();
-      useRouter.mockReturnValue({ push });
+      useRouterMock.mockReturnValue({ push });
       const props = {
         uniqueValues: new Set(["Full-time"]),
       };
@@ -70,7 +72,7 @@ describe("JobFiltersSidebarCheckboxGroup", () => {
       const clickableArea = wrapper.find("[data-test='clickable-area'");
       await clickableArea.trigger("click");
       const fullTimeInput = wrapper.find("[data-test='Full-time']");
-      await fullTimeInput.setChecked();
+      await fullTimeInput.setValue(true);
       expect(push).toHaveBeenCalledWith({ name: "JobResults" });
     });
   });
