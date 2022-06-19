@@ -52,7 +52,6 @@ describe("JobFiltersSidebarJobTypes", () => {
       useStore.mockReturnValue({ commit: jest.fn() });
       const push = jest.fn();
       useRouter.mockReturnValue({ push });
-      const $router = { push };
       const wrapper = mount(JobFiltersSidebarJobTypes, createConfig());
       const clickableArea = wrapper.find("[data-test='clickable-area'");
       await clickableArea.trigger("click");

@@ -4,7 +4,7 @@
       <fieldset>
         <ul class="list-container">
           <li
-            v-for="organization in UNIQUE_ORGANIZATIONS"
+            v-for="organization in uniqueOrganizations"
             :key="organization"
             class="list-element"
           >
@@ -27,31 +27,33 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from "vuex";
+import { ref } from "vue";
+import { useStore } from "vuex";
+import { useRouter } from "vue-router";
+
+import { useUniqueOrganizations } from "@/store/composables.js";
+
+import { ADD_SELECTED_ORGANIZATIONS } from "@/store/constants";
+
 import Accordion from "@/components/Shared/Accordion.vue";
-import {
-  ADD_SELECTED_ORGANIZATIONS,
-  UNIQUE_ORGANIZATIONS,
-} from "@/store/constants";
+
 export default {
   name: "JobFiltersSidebarOrganizations",
   components: {
     Accordion,
   },
-  data() {
-    return {
-      selectedOrganizations: [],
+  setup() {
+    const store = useStore();
+    const router = useRouter();
+    const selectedOrganizations = ref([]);
+    const uniqueOrganizations = useUniqueOrganizations();
+
+    const selectOrganization = () => {
+      store.commit(ADD_SELECTED_ORGANIZATIONS, selectedOrganizations.value);
+      router.push({ name: "JobResults" });
     };
-  },
-  computed: {
-    ...mapGetters([UNIQUE_ORGANIZATIONS]),
-  },
-  methods: {
-    ...mapMutations([ADD_SELECTED_ORGANIZATIONS]),
-    selectOrganization() {
-      this.ADD_SELECTED_ORGANIZATIONS(this.selectedOrganizations);
-      this.$router.push({ name: "JobResults" });
-    },
+
+    return { selectedOrganizations, uniqueOrganizations, selectOrganization };
   },
 };
 </script>
