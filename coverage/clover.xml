@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1655675506171" clover="3.2.0">
-  <project timestamp="1655675506171" name="All files">
-    <metrics statements="255" coveredstatements="253" conditionals="15" coveredconditionals="15" methods="73" coveredmethods="71" elements="343" coveredelements="339" complexity="0" loc="255" ncloc="255" packages="11" files="29" classes="29"/>
+<coverage generated="1655675683751" clover="3.2.0">
+  <project timestamp="1655675683751" name="All files">
+    <metrics statements="255" coveredstatements="254" conditionals="15" coveredconditionals="15" methods="73" coveredmethods="71" elements="343" coveredelements="340" complexity="0" loc="255" ncloc="255" packages="11" files="29" classes="29"/>
     <package name="src.api">
       <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="getDegrees.ts" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/api/getDegrees.ts">
@@ -249,7 +249,7 @@
       </file>
     </package>
     <package name="src.store">
-      <metrics statements="81" coveredstatements="80" conditionals="3" coveredconditionals="3" methods="30" coveredmethods="30"/>
+      <metrics statements="81" coveredstatements="81" conditionals="3" coveredconditionals="3" methods="30" coveredmethods="30"/>
       <file name="actions.ts" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/store/actions.ts">
         <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="8" type="stmt"/>
@@ -300,7 +300,7 @@
         <line num="23" count="10" type="stmt"/>
       </file>
       <file name="getters.ts" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/store/getters.ts">
-        <metrics statements="22" coveredstatements="21" conditionals="3" coveredconditionals="3" methods="15" coveredmethods="15"/>
+        <metrics statements="22" coveredstatements="22" conditionals="3" coveredconditionals="3" methods="15" coveredmethods="15"/>
         <line num="1" count="8" type="stmt"/>
         <line num="19" count="8" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
@@ -316,9 +316,9 @@
         <line num="37" count="3" type="stmt"/>
         <line num="38" count="3" type="cond" truecount="1" falsecount="0"/>
         <line num="39" count="1" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
-        <line num="42" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="43" count="0" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+        <line num="42" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="43" count="1" type="stmt"/>
         <line num="46" count="1" type="stmt"/>
         <line num="47" count="1" type="stmt"/>
         <line num="48" count="1" type="stmt"/>
@@ -349,7 +349,7 @@
       <file name="state.ts" path="/Users/ryan/Desktop/Udemy/Vue-TypeScript-Jest/projects/job-search/src/store/state.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="11" type="stmt"/>
-        <line num="4" count="26" type="stmt"/>
+        <line num="4" count="27" type="stmt"/>
         <line num="14" count="11" type="stmt"/>
       </file>
     </package>
@@ -371,9 +371,9 @@
         <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
         <line num="1" count="3" type="stmt"/>
         <line num="5" count="3" type="stmt"/>
-        <line num="6" count="15" type="stmt"/>
-        <line num="7" count="15" type="stmt"/>
-        <line num="9" count="20" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="16" type="stmt"/>
+        <line num="7" count="16" type="stmt"/>
+        <line num="9" count="21" type="cond" truecount="1" falsecount="0"/>
         <line num="23" count="3" type="cond" truecount="1" falsecount="0"/>
       </file>
     </package>
