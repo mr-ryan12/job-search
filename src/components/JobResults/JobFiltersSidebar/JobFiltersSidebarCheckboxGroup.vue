@@ -28,6 +28,8 @@ import { ref } from "vue";
 import { useStore } from "vuex";
 import { useRouter } from "vue-router";
 
+import { key } from "@/store";
+
 import Accordion from "@/components/Shared/Accordion.vue";
 
 export default defineComponent({
@@ -50,9 +52,9 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const store = useStore();
+    const store = useStore(key);
     const router = useRouter();
-    const selectedValues = ref([]);
+    const selectedValues = ref<string[]>([]);
 
     const selectValue = () => {
       store.commit(props.mutation, selectedValues.value);
