@@ -13,10 +13,11 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import { ref, computed } from "vue";
 
-export default {
+export default defineComponent({
   name: "Accordion",
   props: {
     header: {
@@ -35,7 +36,7 @@ export default {
     };
     return { open, isOpen, carotIcon };
   },
-};
+});
 </script>
 
 <style lang="scss" scoped>
