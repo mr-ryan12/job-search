@@ -35,8 +35,8 @@
 <script>
 import { onMounted, computed } from "vue";
 import { useStore } from "vuex";
-import { useRoute } from "vue-router";
 
+import useCurrentPage from "@/composables/useCurrentPage.js";
 import { useFilteredJobs } from "@/store/composables";
 import { FETCH_JOBS } from "@/store/constants";
 import JobListing from "@/components/JobResults/JobListing.vue";
@@ -53,8 +53,7 @@ export default {
 
     const filteredJobs = useFilteredJobs();
 
-    const route = useRoute();
-    const currentPage = computed(() => Number.parseInt(route.query.page || 1));
+    const currentPage = useCurrentPage();
 
     const previousPage = computed(() => {
       const previousPage = currentPage.value - 1;
